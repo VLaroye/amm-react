@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
-import styles from './App.module.css';
+
+import Layout from './hoc/Layout/Layout';
+
+// import styles from './App.module.css';
 
 class App extends Component {
+
+  state = {
+    routes: [
+      {
+        page: 'home',
+        path: '/'
+      },
+      {
+        page: 'le fest',
+        path:'/'
+      }
+    ]
+  }
+
   render() {
     return (
-      <div className={styles.App} >
-      </div>
+      <Layout navItems={this.state.routes} >
+      </Layout>
     );
   }
 }
