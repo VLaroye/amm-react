@@ -33,6 +33,12 @@ const navBar = (props) => {
             <ul className={ styles.NavMenu } >
                 {navItems}
             </ul>
+            <p 
+                className={styles.SideBarToggler}
+                onClick={props.toggleSideBar}    
+            >
+                Toggle
+            </p>
         </div>
     );
 }

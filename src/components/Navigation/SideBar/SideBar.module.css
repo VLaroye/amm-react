@@ -1,0 +1,32 @@
+.SideBar {
+    min-height: 100vh;
+    width: 70%;
+    background-color: white;
+    border-right: 2px solid #aaa;
+    z-index: 400;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: -70%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Open {
+    transform: translateX(100%);
+}
+
+.Close {
+    transform: translateX(0);
+}
+
+.SideBarItems {
+    list-style: none;
+}
+
+.SideBarItem {
+    text-transform: uppercase;
+}
+
+.SideBarItem a {
+    text-decoration: none;
+}

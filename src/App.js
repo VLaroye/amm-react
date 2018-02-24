@@ -15,13 +15,26 @@ class App extends Component {
       {
         page: 'le fest',
         path:'/'
+      },
+      {
+        page: 'l\'asso',
+        path: '/'
       }
-    ]
+    ],
+    isSideBarVisible: false
+  }
+
+  toggleSideBar = () => {
+    this.setState({isSideBarVisible: !this.state.isSideBarVisible});
   }
 
   render() {
     return (
-      <Layout navItems={this.state.routes} >
+      <Layout 
+        navItems={this.state.routes} 
+        toggleSideBar={this.toggleSideBar}
+        isSideBarVisible={this.state.isSideBarVisible}
+      >
       </Layout>
     );
   }

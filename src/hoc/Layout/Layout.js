@@ -5,7 +5,11 @@ import Nav from '../../components/Navigation/Nav';
 const layout = (props) => {
     return (
         <div>
-            <Nav navItems={props.navItems} />
+            <Nav 
+                navItems={props.navItems} 
+                toggleSideBar={props.toggleSideBar}
+                isSideBarVisible={props.isSideBarVisible}
+            />
             
             { props.children }
 
