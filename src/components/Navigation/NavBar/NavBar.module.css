@@ -1,4 +1,36 @@
 .NavBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3em;
+    width: 100%;
+    background-color: white;
+    z-index: 300;
+    border-bottom: 2px solid purple;
     display: flex;
-    justify-content: space-between;
+}
+
+.NavLogo {
+    height: 100%;
+}
+
+.NavLogo img {
+    height: 100%;
+}
+
+.NavMenu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.NavItem {
+    padding: 0 10px;
+}
+
+.NavItem a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
 }

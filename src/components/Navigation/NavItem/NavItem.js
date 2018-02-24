@@ -2,7 +2,7 @@ import React from 'react';
 
 const navItem = (props) => {
     return (
-        <li>
+        <li className={props.style} >
             <a href={ props.path } >{ props.children }</a>
         </li>
     );

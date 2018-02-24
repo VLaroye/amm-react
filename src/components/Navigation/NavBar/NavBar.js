@@ -7,17 +7,30 @@ import NavItem from '../NavItem/NavItem';
 // STYLES
 import styles from './NavBar.module.css';
 
+// IMAGE 
+import logo from '../../../assets/logo.png';
+
 const navBar = (props) => {
 
     const navItems = props.navItems
         .map(item => {
-            return <NavItem key={item.page} path={ item.path }>{item.page}</NavItem>
-        })
+            return (
+                <NavItem 
+                    style={styles.NavItem}
+                    key={item.page} 
+                    path={ item.path }
+                >
+                    {item.page}
+                </NavItem>
+            )
+        });
 
     return (
         <div className={ styles.NavBar } >
-            <p>Logo</p>
-            <ul>
+            <div className={ styles.NavLogo }>
+                <img src={logo} alt="Logo"/>
+            </div>
+            <ul className={ styles.NavMenu } >
                 {navItems}
             </ul>
         </div>
