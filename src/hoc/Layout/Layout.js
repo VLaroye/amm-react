@@ -3,6 +3,9 @@ import React from 'react';
 // CONTAINERS
 import Nav from '../../containers/Nav/Nav';
 
+// COMPONENTS
+import Footer from '../../components/Footer/Footer';
+
 // STYLES
 import styles from './Layout.module.css';
 
@@ -14,9 +17,8 @@ const layout = (props) => {
             <div className={styles.Content}>
                 { props.children }
             </div>
-            <footer>
-                <h3>Footer</h3>
-            </footer>
+            
+            <Footer />
         </div>
     );
 }

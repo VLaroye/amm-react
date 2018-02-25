@@ -1,0 +1,13 @@
+.Socials {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: auto;
+}
+
+.SocialIcon {
+}
+
+.SocialIcon img {
+    max-width: 100%;
+}

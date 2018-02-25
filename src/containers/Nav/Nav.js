@@ -18,6 +18,14 @@ class Nav extends Component {
           {
             page: 'l\'asso',
             path: '/'
+          },
+          {
+            page: 'galerie',
+            path: '/'
+          },
+          {
+            page: 'contact',
+            path: '/'
           }
         ],
         isSideBarVisible: false

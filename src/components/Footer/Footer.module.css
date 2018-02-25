@@ -1,0 +1,24 @@
+.Footer {
+    min-height: 15em;
+    background-color: black;
+    color: white; 
+}
+
+.FooterLogo {
+    max-width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.FooterLinks {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.FooterLinks a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0 0.5em;
+    border-right: 1px solid white;
+}
