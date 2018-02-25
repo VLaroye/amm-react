@@ -1,18 +1,19 @@
 import React from 'react';
 
-import Nav from '../../components/Navigation/Nav';
+// CONTAINERS
+import Nav from '../../containers/Nav/Nav';
+
+// STYLES
+import styles from './Layout.module.css';
 
 const layout = (props) => {
     return (
         <div>
-            <Nav 
-                navItems={props.navItems} 
-                toggleSideBar={props.toggleSideBar}
-                isSideBarVisible={props.isSideBarVisible}
-            />
+            <Nav/>
             
-            { props.children }
-
+            <div className={styles.Content}>
+                { props.children }
+            </div>
             <footer>
                 <h3>Footer</h3>
             </footer>

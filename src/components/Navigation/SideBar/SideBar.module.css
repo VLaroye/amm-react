@@ -20,13 +20,24 @@
 }
 
 .SideBarItems {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     list-style: none;
 }
 
 .SideBarItem {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
     text-transform: uppercase;
+    margin-top: 0.5em;
+    border-bottom: 2px solid #aaa;
+    padding: 2em 0;
+    border-right: 5px solid purple;
 }
 
 .SideBarItem a {
     text-decoration: none;
+    color: inherit;
 }
