@@ -1,0 +1,9 @@
+.Header {
+    position: relative;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+.Header img {
+    width: 100%;
+}

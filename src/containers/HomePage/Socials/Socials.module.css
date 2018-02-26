@@ -1,6 +1,8 @@
 .Socials {
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 70%;
     margin: auto;
 }
@@ -10,4 +12,12 @@
 
 .SocialIcon img {
     max-width: 100%;
+}
+
+
+@media (min-width: 800px) {
+    .Socials {
+        min-height: 9em;
+        max-width: 30%;
+    }
 }

@@ -21,7 +21,8 @@ const sideBar = (props) => {
                 <NavItem 
                     style={styles.SideBarItem}
                     key={item.page} 
-                    path={ item.path }
+                    path={item.path}
+                    toggleSideBar={props.toggleSideBar}
                 >
                     {item.page}
                 </NavItem>

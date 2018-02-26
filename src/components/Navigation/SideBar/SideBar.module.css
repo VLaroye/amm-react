@@ -4,7 +4,7 @@
     background-color: white;
     border-right: 2px solid #aaa;
     z-index: 400;
-    position: absolute;
+    position: fixed;
     box-sizing: border-box;
     top: 0;
     left: -70%;
@@ -20,6 +20,9 @@
 }
 
 .SideBarItems {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -29,11 +32,8 @@
 .SideBarItem {
     text-align: center;
     box-sizing: border-box;
-    width: 100%;
     text-transform: uppercase;
-    margin-top: 0.5em;
     border-bottom: 2px solid #aaa;
-    padding: 2em 0;
     border-right: 5px solid purple;
 }
 

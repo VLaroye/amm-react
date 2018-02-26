@@ -13,7 +13,7 @@ class Nav extends Component {
           },
           {
             page: 'le fest',
-            path:'/'
+            path:'/festival'
           },
           {
             page: 'l\'asso',
