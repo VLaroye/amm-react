@@ -17,15 +17,15 @@ class Nav extends Component {
           },
           {
             page: 'l\'asso',
-            path: '/'
+            path: '/asso'
           },
           {
             page: 'galerie',
-            path: '/'
+            path: '/galerie'
           },
           {
             page: 'contact',
-            path: '/'
+            path: '/contact'
           }
         ],
         isSideBarVisible: false

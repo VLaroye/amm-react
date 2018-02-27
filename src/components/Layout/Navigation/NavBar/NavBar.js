@@ -5,7 +5,7 @@ import React from 'react';
 import NavItem from '../NavItem/NavItem';
 
 // STYLES
-import styles from './NavBar.module.css';
+import styles from './NavBar.css';
 
 // IMAGE 
 import logo from '../../../../assets/Logo/logo.png';

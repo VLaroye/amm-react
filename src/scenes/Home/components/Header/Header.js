@@ -1,7 +1,7 @@
 import React from 'react';
 
 // STYLES
-import styles from './Header.module.css';
+import styles from './Header.css';
 
 // IMAGES
 import headerImage from '../../../../assets/HomePage/homePage-header.jpg';

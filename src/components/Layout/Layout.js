@@ -7,7 +7,7 @@ import Nav from './Navigation/Nav';
 import Footer from './Footer/Footer';
 
 // STYLES
-import styles from './Layout.module.css';
+import styles from './Layout.css';
 
 const layout = (props) => {
     return (

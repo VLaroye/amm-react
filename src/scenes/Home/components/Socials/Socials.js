@@ -1,7 +1,7 @@
 import React from 'react';
 
 // STYLES
-import styles from './Socials.module.css';
+import styles from './Socials.css';
 
 // IMAGES
 import facebookLogo from '../../../../assets/Socials/facebook.png';

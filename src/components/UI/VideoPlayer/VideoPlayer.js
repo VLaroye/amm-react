@@ -1,7 +1,7 @@
 import React from 'react';
 
 // STYLES
-import styles from './VideoPlayer.module.css';
+import styles from './VideoPlayer.css';
 
 const videoPlayer = (props) => {
     return (

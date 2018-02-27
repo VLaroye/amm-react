@@ -6,7 +6,7 @@ import Socials from './components/Socials/Socials';
 import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer';
 
 // STYLES
-import styles from './HomePage.module.css';
+import styles from './HomePage.css';
 
 class HomePage extends Component {
 

@@ -5,7 +5,7 @@ import NavItem from '../NavItem/NavItem';
 import BackDrop from '../../../UI/BackDrop/BackDrop';
 
 // STYLES 
-import styles from './SideBar.module.css';
+import styles from './SideBar.css';
 
 const sideBar = (props) => {
 
