@@ -8,7 +8,7 @@ import NavItem from '../NavItem/NavItem';
 import styles from './NavBar.module.css';
 
 // IMAGE 
-import logo from '../../../assets/Logo/logo.png';
+import logo from '../../../../assets/Logo/logo.png';
 
 const navBar = (props) => {
 

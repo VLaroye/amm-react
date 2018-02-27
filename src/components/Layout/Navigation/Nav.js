@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import NavBar from '../../components/Navigation/NavBar/NavBar';
-import SideBar from '../../components/Navigation/SideBar/SideBar';
+import NavBar from './NavBar/NavBar';
+import SideBar from './SideBar/SideBar';
 
 class Nav extends Component {
 

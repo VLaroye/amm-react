@@ -1,10 +1,10 @@
 import React from 'react';
 
 // CONTAINERS
-import Nav from '../../containers/Nav/Nav';
+import Nav from './Navigation/Nav';
 
 // COMPONENTS
-import Footer from '../../components/Footer/Footer';
+import Footer from './Footer/Footer';
 
 // STYLES
 import styles from './Layout.module.css';

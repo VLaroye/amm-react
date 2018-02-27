@@ -2,7 +2,7 @@ import React from 'react';
 
 // COMPONENTS
 import NavItem from '../NavItem/NavItem';
-import BackDrop from '../../UI/BackDrop/BackDrop';
+import BackDrop from '../../../UI/BackDrop/BackDrop';
 
 // STYLES 
 import styles from './SideBar.module.css';

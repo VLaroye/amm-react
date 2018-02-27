@@ -4,9 +4,9 @@ import React from 'react';
 import styles from './Socials.module.css';
 
 // IMAGES
-import facebookLogo from '../../../assets/Socials/facebook.png';
-import instagramLogo from '../../../assets/Socials/insta.png';
-import userLogo from '../../../assets/Socials/user.png';
+import facebookLogo from '../../../../assets/Socials/facebook.png';
+import instagramLogo from '../../../../assets/Socials/insta.png';
+import userLogo from '../../../../assets/Socials/user.png';
 
 const socials = (props) => {
     return (

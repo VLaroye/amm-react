@@ -4,9 +4,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // COMPONENTS
-import Layout from './hoc/Layout/Layout';
-import HomePage from './containers/HomePage/HomePage';
-import Festival from './components/Festival/Festival';
+import Layout from './components/Layout/Layout';
+import HomePage from './scenes/Home/HomePage';
 
 // import styles from './App.module.css';
 
@@ -17,7 +16,6 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path ="/festival" component={Festival} />
           </Switch>
         </Layout>
       </Router>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 // COMPONENTS
-import Header from './Header/Header';
-import Socials from './Socials/Socials';
+import Header from './components/Header/Header';
+import Socials from './components/Socials/Socials';
 import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer';
 
 // STYLES

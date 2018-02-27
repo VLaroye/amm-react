@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Footer.module.css';
 
 // IMAGES
-import logo from '../../assets/Logo/logo.png';
+import logo from '../../../assets/Logo/logo.png';
 
 const footer = (props) => {
     return (

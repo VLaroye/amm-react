@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Header.module.css';
 
 // IMAGES
-import headerImage from '../../../assets/HomePage/homePage-header.jpg';
+import headerImage from '../../../../assets/HomePage/homePage-header.jpg';
 
 const header = (props) => {
     return (
