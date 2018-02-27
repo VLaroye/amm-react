@@ -1,7 +1,10 @@
 import React from 'react';
 
+// COMPONENTS
+import Header from './components/Header/Header';
+
 const festival = () => (
-    <div>Festival</div>
+    <Header />
 );
 
 export default festival;

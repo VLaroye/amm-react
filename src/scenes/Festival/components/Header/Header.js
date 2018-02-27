@@ -10,10 +10,10 @@ const header = () => (
     <Fragment>
         <div className={styles.Header} >
             <Link to="/festival/concert" className={[styles.ConcertLink, styles.HeaderLinks].join(' ')}>
-                <p className={styles.HeaderLink} >Concert</p>
+                <h2 className={styles.HeaderLink} >Concert</h2>
             </Link>
             <Link to="/festival/mapping" className={[styles.MappingLink, styles.HeaderLinks].join(' ')}>
-                <p className={styles.HeaderLink} >Mapping</p>
+                <h2 className={styles.HeaderLink} >Mapping</h2>
             </Link>
         </div>
     </Fragment>

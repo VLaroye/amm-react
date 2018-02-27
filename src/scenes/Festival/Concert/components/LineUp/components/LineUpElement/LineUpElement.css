@@ -1,0 +1,47 @@
+.LineUpElement {
+    position: relative;
+    width: 50%;
+}
+
+.LineUpElementImg {
+    width: 100%;
+    height: 100%;
+}
+
+.LineUpElementOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.5s;
+}
+
+.LineUpElementOverlay:hover {
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.LineUpElementInfos {
+    text-align: center;
+    position: absolute;
+    min-width: 40%;
+    border: 2px solid black;
+    bottom: 10%;
+    left: 5%;
+    background-color: white;
+}
+
+@media (min-width: 1000px) {
+    .LineUpElement {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .LineUpElement {
+        width: 33.3333333%;
+    }
+}
