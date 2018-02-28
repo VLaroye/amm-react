@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // STYLES
 import styles from './LineUpElement.css';
 
 
-const lineUpElement = (props) => (
-    <div className={styles.LineUpElement} >
-        <img src={props.artist.imgSrc} alt="" className={styles.LineUpElementImg} />
-        <div className={styles.LineUpElementOverlay} ></div>
-        <div className={styles.LineUpElementInfos} >
-            <p> {props.artist.name} </p>
-        </div>
-    </div>
-);
+class LineUpElement extends Component {
 
-export default lineUpElement;
+    state = {
+        loading: true
+    }
+
+    componentDidMount() {
+        this.setState({loading: false});
+    }
+
+    render() {
+
+        if (this.state.loading) {
+            return <div>loading</div>
+        }
+
+        return (
+            <div className={styles.LineUpElement} >
+                <img src={this.props.artist.imgSrc} alt="" className={styles.LineUpElementImg} />
+                <div className={styles.LineUpElementOverlay} ></div>
+                <div className={styles.LineUpElementInfos} >
+                    <p className={styles.ArtistName} > {this.props.artist.name} </p>
+                    <p className={styles.ArtistStyle} >{this.props.artist.style}</p>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default LineUpElement;

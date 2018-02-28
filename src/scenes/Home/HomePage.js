@@ -11,7 +11,7 @@ import styles from './HomePage.css';
 class HomePage extends Component {
 
     state = {
-        youtubeVideoSrc: 'https://www.youtube.com/embed/TDcJJYY5sms',
+        youtubeVideoSrc: 'https://www.youtube.com/embed/IwzUs1IMdyQ',
         youtubeVideoTitle: 'Video Youtube - Playlist de la semaine'
     }
 
