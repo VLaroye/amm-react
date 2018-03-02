@@ -6,6 +6,7 @@
 .LineUpElementImg {
     width: 100%;
     height: 100%;
+    min-height: 10em;
 }
 
 .LineUpElementOverlay {
@@ -45,14 +46,34 @@
     margin: 0;
 }
 
+@media (min-width: 500px) {
+    .LineUpElementImg {
+        min-height: 18em;
+    }
+}
+
+@media (min-width: 700px) {
+    .LineUpElementImg {
+        min-height: 24em;
+    }
+}
+
 @media (min-width: 1000px) {
     .LineUpElement {
         width: 50%;
     }
+
+    .LineUpElementImg {
+        min-height: 28em;
+     }
 }
 
 @media (min-width: 1200px) {
     .LineUpElement {
         width: 33.3333333%;
+    }
+
+    .LineUpElementImg {
+        min-height: 18em; 
     }
 }

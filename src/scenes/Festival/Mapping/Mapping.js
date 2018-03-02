@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 // COMPONENTS
 import Header from '../components/Header/Header';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import VideoPlayer from '../../../components/UI/VideoPlayer/VideoPlayer';
 
 // STYLES
@@ -14,10 +15,10 @@ const mapping = () => {
     return (
         <Fragment>
             <Header />
-            <h3 className={styles.SectionTitle} >Mapping</h3>
+            <SectionTitle>Mapping</SectionTitle>
             <img className={styles.MappingHeader} src={mappingHeader} alt=""/>
 
-            <h3 className={styles.SectionTitle} >Teaser Video Mapping Festival</h3>
+            <SectionTitle>Teaser Video Mapping Festival</SectionTitle>
             <div className={styles.VideoPlayer} >
                 <VideoPlayer 
                     src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FVideoMappingFestival%2Fvideos%2F185176878754739%2F' 

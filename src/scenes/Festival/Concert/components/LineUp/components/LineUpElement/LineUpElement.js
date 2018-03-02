@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // STYLES
 import styles from './LineUpElement.css';
 
+import ImageLoader from '../../../../../../../components/ImageLoader/ImageLoader';
+
 
 class LineUpElement extends Component {
 
@@ -22,7 +24,7 @@ class LineUpElement extends Component {
 
         return (
             <div className={styles.LineUpElement} >
-                <img src={this.props.artist.imgSrc} alt="" className={styles.LineUpElementImg} />
+                <ImageLoader src={this.props.artist.imgSrc} imgCssClass={styles.LineUpElementImg} />
                 <div className={styles.LineUpElementOverlay} ></div>
                 <div className={styles.LineUpElementInfos} >
                     <p className={styles.ArtistName} > {this.props.artist.name} </p>

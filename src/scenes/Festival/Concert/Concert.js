@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 // COMPONENTS
 import Header from '../components/Header/Header';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import LineUp from './components/LineUp/LineUp';
 
 // STYLES
@@ -15,7 +16,7 @@ class Concert extends Component {
                 <Header />
 
                 <section>
-                    <h3 className={styles.SectionTitle} >Line up</h3>
+                    <SectionTitle>Line up</SectionTitle>
                     <LineUp />
                 </section>
             
