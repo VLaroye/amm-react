@@ -1,12 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
-// STYLES 
-import styles from './SectionTitle.css';
+const SectionTitle = styled.h3`
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.09em;
+    padding: 2.5em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+`;
 
-const sectionTitle = (props) => {
-    return (
-        <h3 className={styles.SectionTitle} >{props.children}</h3>
-    )
-}
-
-export default sectionTitle;
+export default SectionTitle;

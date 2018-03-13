@@ -1,11 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import styled from 'styled-components';
 
 // COMPONENTS
-import Spinner from '../UI/Spinner/Spinner';
+import Spinner from '../Spinner/Spinner';
+
+const Container = styled.div`
+    img {
+        width: 100%;
+        height: 100%;
+    }
+`;
 
 class ImageLoader extends Component {
 
-    state = {
+    state= {
         status: 'loading'
     }
 
@@ -14,14 +22,12 @@ class ImageLoader extends Component {
     }
 
     render() {
-        
         return (
-            <div className={this.props.className} >
+            <Container>
                 { this.state.status === 'loading' ? <Spinner /> : null }
 
-                <img  onLoad={this.handleImageLoaded} className={this.props.imgCssClass} src={this.props.src} alt=""/>
-            </div>
-            
+                <img onLoad={this.handleImageLoaded} src={this.props.src} alt={this.props.alt} />
+            </Container>
         );
     }
 }

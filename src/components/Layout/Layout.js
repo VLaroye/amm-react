@@ -1,26 +1,23 @@
-import React from 'react';
-
-// CONTAINERS
-import Nav from './Navigation/Nav';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 
 // COMPONENTS
-import Footer from './Footer/Footer';
+import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
 
-// STYLES
-import styles from './Layout.css';
+const ContentContainer = styled.div`
+    min-height: 75vh;
+    margin-top: 3em;
+`;
 
-const layout = (props) => {
-    return (
-        <div>
-            <Nav/>
-            
-            <div className={styles.Content}>
-                { props.children }
-            </div>
-            
-            <Footer />
-        </div>
-    );
-}
+const layout = (props) => (
+    <Fragment>
+        <Navigation />
+        <ContentContainer>
+            { props.children }
+        </ContentContainer>
+        <Footer />
+    </Fragment>
+);
 
 export default layout;
