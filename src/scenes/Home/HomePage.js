@@ -10,6 +10,7 @@ import userLogo from '../../assets/Socials/user.png';
 // COMPONENTS
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import YoutubePlaylists from './components/YoutubePlaylists/YoutubePlaylists';
 
 const Header = styled.section`
     position: relative;
@@ -37,16 +38,27 @@ const SocialIcon = styled.a`
     }
 `;
 
+const EventAndYoutubeContainer = styled.div`
+    display: flex;
+`;
+
+const NextEventSection = styled.section`
+    width: 50%;
+
+    h3 {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+`;
+
 const YoutubePlaylistSection = styled.section`
-    background-color: black;
-    color: white;
-    margin-bottom: 2em;
+    width: 50%;
 `;
 
 class HomePage extends Component {
 
     state = {
-        youtubeVideoSrc: 'https://www.youtube.com/embed/IwzUs1IMdyQ',
+        youtubeVideoSrc: 'https://www.youtube.com/watch?v=vaVcFzGrwgw',
         youtubeVideoTitle: 'Video Youtube - Playlist de la semaine'
     }
 
@@ -68,13 +80,15 @@ class HomePage extends Component {
                     </SocialIcon>
                 </Socials>
 
-                <YoutubePlaylistSection>
-                    <SectionTitle>Playlist de la semaine</SectionTitle>
-                    <VideoPlayer
-                        src={this.state.youtubeVideoSrc}
-                        title={this.state.youtubeVideoTitle}
-                    />
-                </YoutubePlaylistSection>
+                <EventAndYoutubeContainer>
+                    <NextEventSection>
+                        <SectionTitle>Prochain Event</SectionTitle>
+                    </NextEventSection>
+
+                    <YoutubePlaylistSection>
+                        <YoutubePlaylists/>
+                    </YoutubePlaylistSection>
+                </EventAndYoutubeContainer>
             </div>
         );
     }
