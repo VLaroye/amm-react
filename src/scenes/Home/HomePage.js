@@ -8,7 +8,6 @@ import instagramLogo from '../../assets/Socials/insta.png';
 import userLogo from '../../assets/Socials/user.png';
 
 // COMPONENTS
-import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import YoutubePlaylists from './components/YoutubePlaylists/YoutubePlaylists';
 
@@ -39,11 +38,10 @@ const SocialIcon = styled.a`
 `;
 
 const EventAndYoutubeContainer = styled.div`
-    display: flex;
 `;
 
 const NextEventSection = styled.section`
-    width: 50%;
+    width: 100%;
 
     h3 {
         border: 2px solid black;
@@ -52,7 +50,7 @@ const NextEventSection = styled.section`
 `;
 
 const YoutubePlaylistSection = styled.section`
-    width: 50%;
+    width: 100%;
 `;
 
 class HomePage extends Component {
@@ -68,6 +66,7 @@ class HomePage extends Component {
                 <Header>
                     <img src={headerImg} alt="Jumo sur la scène du AMM Fest numéro 3"/>
                 </Header>
+                
                 <Socials>
                     <SocialIcon>
                         <img src={facebookLogo} alt="Logo Facebook"/>
@@ -82,7 +81,12 @@ class HomePage extends Component {
 
                 <EventAndYoutubeContainer>
                     <NextEventSection>
-                        <SectionTitle>Prochain Event</SectionTitle>
+                        <SectionTitle>Prochains Events</SectionTitle>
+                        <p>Nom</p>
+                        <p>Date</p>
+                        <p>Lieu</p>
+                        <p>Prix</p>
+                        <p>Lien + de détails ?</p>
                     </NextEventSection>
 
                     <YoutubePlaylistSection>

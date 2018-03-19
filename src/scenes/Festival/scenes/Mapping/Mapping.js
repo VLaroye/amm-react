@@ -5,7 +5,6 @@ import media from '../../../../mediaQueriesTemplate';
 // COMPONENTS
 import Header from '../../components/Header/Header';
 import SectionTitle from '../../../../components/SectionTitle/SectionTitle';
-import ImageLoader from '../../../../components/ImageLoader/ImageLoader';
 import VideoPlayer from '../../../../components/VideoPlayer/VideoPlayer';
 
 // IMAGES

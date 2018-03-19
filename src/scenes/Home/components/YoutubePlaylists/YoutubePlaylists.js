@@ -8,20 +8,15 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/fontawesome-free-sol
 // AXIOS
 import axios from 'axios';
 
-// COMPONENTS
-import SectionTitle from '../../../../components/SectionTitle/SectionTitle';
-
 const CHANNEL_ID = 'UCyc6lWpR1mbZ5YMcIJ6VCKw';
 const API_KEY = 'AIzaSyDTSOmwWBiFQU8DJYFlmb6sTCYktkiIv_g';
-const MAX_RESULT = 3;
+const MAX_RESULT = 10;
 
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
-    border-left: none;
+    background-color: black;
 
     h3 {
+        color: white;
         margin: 0;
         text-align: center;
         letter-spacing: 0.09em;
@@ -32,8 +27,49 @@ const Header = styled.div`
 `;
 
 const ControlButton = styled.button`
+    cursor: pointer;
     background-color: inherit;
     border: none;
+`;
+
+const Container = styled.div`
+    position: relative;
+    display: flex;
+`;
+
+const CurrentPlaylistContainer = styled.div`
+    width: 45%;
+    height: 450px;
+    margin: auto;
+`;
+
+const SideContainer = styled.div`
+    min-height: 100%;
+    width: 26%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .overlay {
+        position: absolute;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        transition-duration: 0.5s;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 class YoutubePlaylists extends Component {
@@ -52,7 +88,6 @@ class YoutubePlaylists extends Component {
         axios.get(`https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=${CHANNEL_ID}&maxResults=${MAX_RESULT}&key=${API_KEY}`)
             .then(response => {
                 this.setState({loading: false, playlists: response.data.items});
-                console.log(this.state.playlists);
             })
     }
 
@@ -76,22 +111,49 @@ class YoutubePlaylists extends Component {
         });
     }
 
+    prevIndex = (index) => {
+        return index === 0 ? this.state.playlists.length-1 : index-=1;
+    }
+
+    nextIndex = (index) => {
+        return index === this.state.playlists.length-1 ? 0 : index+=1;
+    }
+
     render() {
+        let prevIndex = this.prevIndex(this.state.currentPlaylistIndex);
+        let nextIndex = this.nextIndex(this.state.currentPlaylistIndex);
         return (
             <div>
                 <Header>
-                    <ControlButton onClick={this.handlePrevious} >
-                        <FontAwesomeIcon icon={faChevronLeft} size='2x'/>
-                    </ControlButton>
                     <h3>Playlists de la semaine</h3>
-                    <ControlButton onClick={this.handleNext} >
-                        <FontAwesomeIcon icon={faChevronRight} size='2x' />
-                    </ControlButton>
                 </Header>
-                { this.state.loading === true ? <div>Loading...</div> : <iframe id="ytplayer" type="text/html" width="100%" height="360" src={ `http://www.youtube.com/embed?listType=playlist&list=${this.state.playlists[this.state.currentPlaylistIndex].id}` }frameborder="0"/>}
+                { this.state.loading === true ? 
+                    <div>Loading...</div> : 
+                        <Container>
+                            <SideContainer left onClick={this.handlePrevious} >
+                                <div className="overlay"></div>
+                                <img src={this.state.playlists[prevIndex].snippet.thumbnails.medium.url} alt=""/>
+                            </SideContainer>
+                            <CurrentPlaylistContainer>
+                                <iframe 
+                                    id="ytplayer" 
+                                    type="text/html" 
+                                    width="100%" 
+                                    height="100%" 
+                                    src={`http://www.youtube.com/embed?listType=playlist&list=${this.state.playlists[this.state.currentPlaylistIndex].id}`} 
+                                    title='Playlist AMM'
+                                    frameBorder="0"
+                                />
+                            </CurrentPlaylistContainer>
+                            <SideContainer right onClick={this.handleNext} >
+                                <div className="overlay"></div>
+                                <img src={this.state.playlists[nextIndex].snippet.thumbnails.medium.url} alt=""/>
+                            </SideContainer>
+                        </Container>
+                }
             </div>
         )
     }
 }
 
-export default YoutubePlaylists;
+export default YoutubePlaylists; 
