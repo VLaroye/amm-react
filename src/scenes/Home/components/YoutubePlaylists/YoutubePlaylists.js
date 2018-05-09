@@ -13,14 +13,12 @@ const API_KEY = 'AIzaSyDTSOmwWBiFQU8DJYFlmb6sTCYktkiIv_g';
 const MAX_RESULT = 10;
 
 const Header = styled.div`
-    background-color: black;
-
     h3 {
-        color: white;
+        color: #b14772;
         margin: 0;
         text-align: center;
         letter-spacing: 0.09em;
-        padding: 2.5em 0;
+        padding: 1em;
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -28,6 +26,7 @@ const Header = styled.div`
 
 const ControlButton = styled.button`
     cursor: pointer;
+    color: white;
     background-color: inherit;
     border: none;
 `;
@@ -35,12 +34,17 @@ const ControlButton = styled.button`
 const Container = styled.div`
     position: relative;
     display: flex;
+    margin: 0 auto 2em auto;
 `;
 
 const CurrentPlaylistContainer = styled.div`
     width: 45%;
-    height: 450px;
+    height: 20em;
     margin: auto;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 
 const SideContainer = styled.div`
@@ -68,7 +72,11 @@ const SideContainer = styled.div`
 
     img {
         width: 100%;
-        height: 100%;
+        height: 80%;
+    }
+
+    @media (max-width: 1000px) {
+        display: none;
     }
 `;
 
@@ -125,7 +133,13 @@ class YoutubePlaylists extends Component {
         return (
             <div>
                 <Header>
+                    <ControlButton onClick={this.handlePrevious}>
+                        <FontAwesomeIcon icon={faChevronLeft}/>
+                    </ControlButton>
                     <h3>Playlists de la semaine</h3>
+                    <ControlButton onClick={this.handleNext}>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </ControlButton>
                 </Header>
                 { this.state.loading === true ? 
                     <div>Loading...</div> : 

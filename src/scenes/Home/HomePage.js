@@ -21,6 +21,8 @@ const Header = styled.section`
     }
 `;
 
+const HeaderButton = styled.button``;
+
 const Socials = styled.section`
     position: relative;
     display: flex;
@@ -42,11 +44,58 @@ const EventAndYoutubeContainer = styled.div`
 
 const NextEventSection = styled.section`
     width: 100%;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e88c6b+0,e88c6b+28,ad426c+100 */
+    background: #e88c6b; /* Old browsers */
+    background: -moz-linear-gradient(top, #e88c6b 0%, #e88c6b 28%, #ad426c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e88c6b 0%,#e88c6b 28%,#ad426c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e88c6b 0%,#e88c6b 28%,#ad426c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e88c6b', endColorstr='#ad426c',GradientType=0 ); /* IE6-9 */
+
 
     h3 {
-        border: 2px solid black;
-        border-collapse: collapse;
+        color: white;
+        background-color: black;
     }
+`;
+
+const NextEventSectionContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 25em;
+`;
+
+const NextEventLeftSection = styled.div`
+    width: 30%;
+    height: 18em;
+    display: flex;
+    flex-flow: column;
+`;
+
+const EventDate = styled.p`
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+`;
+
+const EventDivider = styled.hr`
+    height: 0.1em;
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+`;
+
+const EventName = styled.h4`
+    margin: 0;
+    font-size: 1.8em;
+`;
+
+const NextEventRightSection = styled.div`
+    width: 40%;
+    height: 20em;
+    background-color: white;
 `;
 
 const YoutubePlaylistSection = styled.section`
@@ -65,6 +114,7 @@ class HomePage extends Component {
             <div>
                 <Header>
                     <img src={headerImg} alt="Jumo sur la scène du AMM Fest numéro 3"/>
+                    {/*<HeaderButton>fkldf</HeaderButton>*/}
                 </Header>
                 
                 <Socials>
@@ -81,12 +131,16 @@ class HomePage extends Component {
 
                 <EventAndYoutubeContainer>
                     <NextEventSection>
-                        <SectionTitle>Prochains Events</SectionTitle>
-                        <p>Nom</p>
-                        <p>Date</p>
-                        <p>Lieu</p>
-                        <p>Prix</p>
-                        <p>Lien + de détails ?</p>
+                        <SectionTitle>Events à venir</SectionTitle>
+                        <NextEventSectionContainer>
+                            <NextEventLeftSection>
+                                <EventDate>28 Août</EventDate>
+                                <EventDivider/>
+                                <EventName>Tournoi de Mölkky</EventName>
+                                <div>Liens sociaux</div>
+                            </NextEventLeftSection>
+                            <NextEventRightSection></NextEventRightSection>
+                        </NextEventSectionContainer>
                     </NextEventSection>
 
                     <YoutubePlaylistSection>

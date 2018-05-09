@@ -20,10 +20,12 @@ class Navigation extends Component {
               page: 'l\'asso',
               path: '/asso'
             },
+            /*
             {
               page: 'galerie',
               path: '/galerie'
             },
+            */
             {
               page: 'contact',
               path: '/contact'

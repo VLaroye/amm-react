@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { resolve } from 'url';
 
-const gallery = () => (
-    <div>Galerie</div>
-);
+class Gallery extends Component {
+    componentDidMount() {
+        this.loadAlbums();
+    }
 
-export default gallery;
+    render() {
+        return (
+            <div>Gallery</div>
+        );
+    }
+}
+
+export default Gallery;
