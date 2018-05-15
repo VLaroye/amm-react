@@ -137,7 +137,6 @@ class HomePage extends Component {
                                 <EventDate>28 Août</EventDate>
                                 <EventDivider/>
                                 <EventName>Tournoi de Mölkky</EventName>
-                                <div>Liens sociaux</div>
                             </NextEventLeftSection>
                             <NextEventRightSection></NextEventRightSection>
                         </NextEventSectionContainer>
