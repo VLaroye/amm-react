@@ -16,17 +16,20 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    height: 3em;
+    height: 5em;
     width: 100%;
     background-color: white;
     z-index: 300;
     border-bottom: 2px solid purple;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
 
 const Logo = styled.img`
-    height: 100%;
+    height: 60%;
+    position: absolute;
+    left: 10%;
 `;
 
 const NavMenu = styled.ul`
@@ -57,6 +60,8 @@ const ToggleSideBarButton = styled.button`
     background-color: inherit;
     margin-right: 2em;
     cursor: pointer;
+    position: absolute;
+    right: 10%;
 
     &:focus {
         outline: none;

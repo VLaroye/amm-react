@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 
 const ContentContainer = styled.div`
     min-height: 75vh;
-    margin-top: 3em;
+    margin-top: 5em;
 `;
 
 const layout = (props) => (

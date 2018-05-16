@@ -9,8 +9,9 @@ import logo from '../../assets/Logo/logo_pres.png';
 
 const PresentationSection = styled.section`    
     display: flex;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e88c6b+0,e88c6b+28,ad426c+100 */
     background: #e88c6b; /* Old browsers */
@@ -21,25 +22,24 @@ const PresentationSection = styled.section`
 
     .logo {
         text-align: center;
-        min-width: 40%;
-        max-width: 45%;
+        width: 80%;
         padding: 5% 0;
 
         img {
             max-width: 100%;
-            max-height: 15em;
         }
     }
 
     .presentation {
 
         h3 {
-            width: 70%;
+            width: 90%;
             margin: 0;
             font-size: 2em;
         }
-        max-width: 40%;
-        padding: 5% 0;
+        max-width: 80%;
+        margin: auto;
+        padding: 0.5em 0;
     }
 `;
 
@@ -52,9 +52,8 @@ const EventsContainer = styled.div`
 `;
 
 const EventDiv = styled.div`
-    width: 33%;
+    width: 50%;
     height: 15em;
-    border: 1px solid black;
     position: relative;
 
     .title {

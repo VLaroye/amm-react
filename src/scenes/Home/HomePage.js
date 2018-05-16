@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import media from '../../mediaQueriesTemplate';
 
 // IMAGES
 import headerImg from '../../assets/HomePage/homePage-header.jpg';
@@ -21,9 +22,64 @@ const Header = styled.section`
     }
 `;
 
-const HeaderButton = styled.button``;
+const HeaderButton = styled.button`
+    position: absolute;
+    border: none;
+    text-transform: uppercase;
+    bottom: 15%;
+    left: 5%;
+    padding: 2%;    
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e88c6b+0,e88c6b+28,ad426c+100 */
+    background: #e88c6b; /* Old browsers */
+    background: -moz-linear-gradient(top, #e88c6b 0%, #e88c6b 28%, #ad426c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e88c6b 0%,#e88c6b 28%,#ad426c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e88c6b 0%,#e88c6b 28%,#ad426c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e88c6b', endColorstr='#ad426c',GradientType=0 ); /* IE6-9 */
+
+    h4, h5 {
+        text-align: left;
+        margin: 0;
+        color: white;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    h6 {
+        font-size: 1em;
+        color: #723149;
+        margin: 0.2em 0 0 0;
+        text-align: left;
+    }
+
+    ${media.tablet`
+        bottom: 20%;
+        left: 6%;
+        width: 40%;
+        min-height: 30%;
+
+        h4{
+            font-size: 2em;
+        }
+
+        h5 {
+            font-size: 1.5em;
+        }
+
+        h6 {
+            font-size: 1.2em;
+        }
+    `}
+`;
 
 const Socials = styled.section`
+    text-align: center;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -35,7 +91,7 @@ const Socials = styled.section`
 const SocialIcon = styled.a`
 
     img {
-        max-width: 100%;
+        max-width: 80%;
     }
 `;
 
@@ -61,14 +117,16 @@ const NextEventSection = styled.section`
 
 const NextEventSectionContainer = styled.div`
     display: flex;
+    flex-flow: column;
     justify-content: space-around;
     align-items: center;
     min-height: 25em;
 `;
 
 const NextEventLeftSection = styled.div`
-    width: 30%;
-    height: 18em;
+    order: 2;
+    width: 80%;
+    margin: 1em 0;
     display: flex;
     flex-flow: column;
 `;
@@ -93,7 +151,9 @@ const EventName = styled.h4`
 `;
 
 const NextEventRightSection = styled.div`
-    width: 40%;
+    order: 1;
+    min-width: 80%;
+    margin: 1em 0 0 0;
     height: 20em;
     background-color: white;
 `;
@@ -114,7 +174,11 @@ class HomePage extends Component {
             <div>
                 <Header>
                     <img src={headerImg} alt="Jumo sur la scène du AMM Fest numéro 3"/>
-                    {/*<HeaderButton>fkldf</HeaderButton>*/}
+                    <HeaderButton>
+                        <h4>20 - 21 Juillet 2018</h4>
+                        <h5>Steenvoorde</h5>
+                        <h6>Mapping / 2 scènes <br/> Coin ciné</h6>
+                    </HeaderButton>
                 </Header>
                 
                 <Socials>
