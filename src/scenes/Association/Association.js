@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../mediaQueriesTemplate';
 
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -41,6 +42,34 @@ const PresentationSection = styled.section`
         margin: auto;
         padding: 0.5em 0;
     }
+
+    ${media.tablet`
+        .logo {
+            width: 60%;
+        }
+
+        .presentation {
+            max-width: 60%;
+        }
+    `}
+
+    ${media.desktop`
+        flex-flow: initial;
+        justify-content: space-around;
+
+        .logo {
+            width: 40%;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        .presentation {
+            max-width: 40%;
+            margin: auto;
+        }
+    `}
 `;
 
 const EventsSection = styled.section`
@@ -66,6 +95,14 @@ const EventDiv = styled.div`
             margin: 0;
         }
     }
+
+    ${media.tablet`
+        width: 33.333%;
+    `}
+
+    ${media.desktop`
+        width: 25%;
+    `}
 `;
 
 const TeamSection = styled.section`
