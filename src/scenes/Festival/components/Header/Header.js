@@ -10,13 +10,21 @@ const Container = styled.div`
 `;
 
 const HeaderLink = styled(Link)`
-    width: 49%;
+    width: 50%;
     min-height: 4em;
     display: flex;
     justify-content: center;
     align-content: center;
     text-decoration: none;
-    color: inherit;
+    color: ${props => {
+        if(props.concert) {
+            return 'black'
+        } else if (props.mapping) {
+            return 'white';
+        }
+            return 'white';
+        }
+    }};
     background-color: ${props => {
         if(props.concert) {
             return '#e67b73'

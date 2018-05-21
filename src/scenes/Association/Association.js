@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../mediaQueriesTemplate';
 
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -22,7 +23,7 @@ const PresentationSection = styled.section`
 
     .logo {
         text-align: center;
-        width: 80%;
+        width: 70%;
         padding: 5% 0;
 
         img {
@@ -41,6 +42,31 @@ const PresentationSection = styled.section`
         margin: auto;
         padding: 0.5em 0;
     }
+
+    ${media.tablet`
+        flex-flow: initial;
+        justify-content: space-between;
+
+        .logo {
+            width: 40%;
+            margin: auto;
+        }
+
+        .presentation {
+            width: 40%;
+        }
+    `}
+
+    ${media.desktop`
+        .logo {
+            width: 25%;
+            margin: auto;
+        }
+
+        .presentation {
+            width: 30%;
+        }
+    `}
 `;
 
 const EventsSection = styled.section`
