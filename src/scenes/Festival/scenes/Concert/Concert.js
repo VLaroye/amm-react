@@ -127,7 +127,7 @@ const concert = () => (
                     <p>ouverture des portes : 15h</p>
                     <p>garden party : 15h-19h30</p>
                     <p>concert : 19h30-3h00</p>
-                    <div class="prices">
+                    <div className="prices">
                         <p>pass journée : 12euros*</p>
                         <p>pass soirée : 9euros*</p>
                     </div>

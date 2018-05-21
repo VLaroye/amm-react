@@ -124,7 +124,7 @@ const mapping = () => (
                     <h4>horaires</h4>
                     <p>début de la projection : 22h00</p>
                     <p>fin de la projection : 00h00</p>
-                    <div class="prices">
+                    <div className="prices">
                         <p>gratuit !</p>
                     </div>
                 </div>

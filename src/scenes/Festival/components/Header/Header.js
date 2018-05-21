@@ -47,10 +47,10 @@ const HeaderLink = styled(Link)`
 
 const header = () => (
     <Container>
-        <HeaderLink concert to='/festival/concert'>
+        <HeaderLink concert="true" to='/festival/concert'>
             <h2>Concert</h2>
         </HeaderLink>
-        <HeaderLink mapping to='/festival/mapping'>
+        <HeaderLink mapping="true" to='/festival/mapping'>
             <h2>Mapping</h2>
         </HeaderLink>
     </Container>

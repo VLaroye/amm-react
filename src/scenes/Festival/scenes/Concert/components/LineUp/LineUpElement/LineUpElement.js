@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const ArtistImg = styled(ImageLoader)`
     width: 100%;
-    min-height: 100%;
+    height: 100%;
 `;
 
 const Overlay = styled.div`

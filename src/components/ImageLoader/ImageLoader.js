@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Spinner from '../Spinner/Spinner';
 
 const Container = styled.div`
+    height: 100%;
+    
     img {
         width: 100%;
         height: 100%;
