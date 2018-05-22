@@ -23,7 +23,7 @@ const PresentationSection = styled.section`
 
     .logo {
         text-align: center;
-        width: 80%;
+        width: 70%;
         padding: 5% 0;
 
         img {
@@ -44,30 +44,27 @@ const PresentationSection = styled.section`
     }
 
     ${media.tablet`
+        flex-flow: initial;
+        justify-content: space-between;
+
         .logo {
-            width: 60%;
+            width: 40%;
+            margin: auto;
         }
 
         .presentation {
-            max-width: 60%;
+            width: 40%;
         }
     `}
 
     ${media.desktop`
-        flex-flow: initial;
-        justify-content: space-around;
-
         .logo {
-            width: 40%;
-
-            img {
-                width: 50%;
-            }
+            width: 25%;
+            margin: auto;
         }
 
         .presentation {
-            max-width: 40%;
-            margin: auto;
+            width: 30%;
         }
     `}
 `;

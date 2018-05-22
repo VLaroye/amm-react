@@ -121,6 +121,10 @@ const NextEventSectionContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     min-height: 25em;
+
+    ${media.tablet`
+        flex-flow: initial;
+    `}
 `;
 
 const NextEventLeftSection = styled.div`
@@ -129,11 +133,16 @@ const NextEventLeftSection = styled.div`
     margin: 1em 0;
     display: flex;
     flex-flow: column;
+
+    ${media.tablet`
+        order: 1;
+        width: 30%;
+    `}
 `;
 
 const EventDate = styled.p`
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin: 0;
     text-transform: uppercase;
 `;
@@ -152,10 +161,15 @@ const EventName = styled.h4`
 
 const NextEventRightSection = styled.div`
     order: 1;
-    min-width: 80%;
+    width: 80%;
     margin: 1em 0 0 0;
     height: 20em;
     background-color: white;
+
+    ${media.tablet`
+        order: 2;
+        width: 35%;
+    `}
 `;
 
 const YoutubePlaylistSection = styled.section`
