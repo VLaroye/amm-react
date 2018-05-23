@@ -6,7 +6,7 @@ import media from '../../mediaQueriesTemplate';
 
 const Container = styled.div`
     width: 100%;
-    height: 20em;
+    height: 27em;
     margin: auto;
 
     ${media.desktop`

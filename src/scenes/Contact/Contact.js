@@ -27,14 +27,14 @@ const Header = styled.section`
 `;
 
 const HeaderButton = styled.button`
+    font-family: Ubuntu;
     border: none;
     margin: 0 1em;
-    background-color: #f1b6bf;
-    opacity: 0.8;
+    background-color: #af3f71;
     min-height: 4em;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0 1em;
+    padding: 0 0.7em;
 `;
 
 const ContactForm = styled.form``;

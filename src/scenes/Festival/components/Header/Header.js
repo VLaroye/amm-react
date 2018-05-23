@@ -27,9 +27,9 @@ const HeaderLink = styled(Link)`
     }};
     background-color: ${props => {
         if(props.concert) {
-            return '#e67b73'
-        } else if (props.mapping) {
             return '#af3f71';
+        } else if (props.mapping) {
+            return '#e67b73';
         }
             return 'white';
         }
@@ -37,6 +37,7 @@ const HeaderLink = styled(Link)`
 
     h2 {
         font-weight: bold;
+        font-family: Ubuntu;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-size: 1.3em;

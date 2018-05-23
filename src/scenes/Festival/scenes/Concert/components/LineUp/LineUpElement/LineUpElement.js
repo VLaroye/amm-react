@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import media from '../../../../../../../mediaQueriesTemplate';
 
+import { Link } from 'react-router-dom';
+
 // COMPONENTS
 import ImageLoader from '../../../../../../../components/ImageLoader/ImageLoader';
 
@@ -50,23 +52,27 @@ const ArtistName = styled.h4`
     margin: 0;
     padding: 0;
     font-weight: bold;
+    font-family: Ubuntu;
     text-transform: uppercase;
 `;
 
 const ArtistStyle = styled.p`
     margin: 0;
+    font-family: 'Open Sans';
 `;
 
 class LineUpElement extends Component {
     render () {
         return (
             <Container>
-                <ArtistImg src={this.props.artist.imgSrc} />
-                <Overlay />
-                <Infos>
-                    <ArtistName>{ this.props.artist.name }</ArtistName>
-                    <ArtistStyle>{ this.props.artist.style }</ArtistStyle>
-                </Infos>
+                <Link to={`/artiste/${this.props.artist.name}`} >
+                    <ArtistImg src={this.props.artist.imgSrc} />
+                    <Overlay />
+                    <Infos>
+                        <ArtistName>{ this.props.artist.name }</ArtistName>
+                        <ArtistStyle>{ this.props.artist.style }</ArtistStyle>
+                    </Infos>
+                </Link>
             </Container>
         );
     }

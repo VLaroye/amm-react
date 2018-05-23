@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
+
 // ROUTING
 import { Link } from 'react-router-dom';
 
@@ -8,7 +11,6 @@ const Container = styled.div`
     min-height: 100vh;
     width: 70%;
     background-color: white;
-    border-right: 2px solid #aaa;
     z-index: 400;
     position: fixed;
     box-sizing: border-box;
@@ -41,15 +43,32 @@ const SideBarItems = styled.ul`
 `;
 
 const SideBarItem = styled.li`
-    text-align: center;
+    font-family: Ubuntu;
+    font-weight: bold;
+    min-height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     box-sizing: border-box;
     text-transform: uppercase;
-    border-bottom: 2px solid #aaa;
-    border-right: 5px solid purple;
+    border-bottom: 1px solid purple;
 
     a {
         color: inherit;
         text-decoration: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        background-color: #b14772;
+        color: white;
+        
+        svg {
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+            color: white;
+        }
     }
 `;
 
@@ -63,6 +82,7 @@ const sideBar = (props) => {
                     toggleSideBar={props.toggleSideBar}
                 >
                     <Link to={item.path} >{item.page}</Link>
+                    <FontAwesomeIcon icon={faChevronRight} size="2x" />
                 </SideBarItem>
             )
         });

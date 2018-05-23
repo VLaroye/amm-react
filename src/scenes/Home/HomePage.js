@@ -41,6 +41,7 @@ const HeaderButton = styled.button`
         text-align: left;
         margin: 0;
         color: white;
+        font-family: Ubuntu;
     }
 
     h4 {
@@ -56,6 +57,7 @@ const HeaderButton = styled.button`
         color: #723149;
         margin: 0.2em 0 0 0;
         text-align: left;
+        font-family: Ubuntu;
     }
 
     ${media.tablet`
@@ -142,6 +144,7 @@ const NextEventLeftSection = styled.div`
 
 const EventDate = styled.p`
     font-weight: bold;
+    font-family: Ubuntu;
     font-size: 1.7em;
     margin: 0;
     text-transform: uppercase;
@@ -157,6 +160,7 @@ const EventDivider = styled.hr`
 const EventName = styled.h4`
     margin: 0;
     font-size: 1.8em;
+    font-family: 'Open Sans';
 `;
 
 const NextEventRightSection = styled.div`
@@ -209,7 +213,7 @@ class HomePage extends Component {
 
                 <EventAndYoutubeContainer>
                     <NextEventSection>
-                        <SectionTitle>Events à venir</SectionTitle>
+                        <SectionTitle>événements à venir</SectionTitle>
                         <NextEventSectionContainer>
                             <NextEventLeftSection>
                                 <EventDate>28 Août</EventDate>

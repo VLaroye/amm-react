@@ -46,6 +46,7 @@ const NavMenu = styled.ul`
 const NavItem = styled.li`
     padding: 0 10px;
     font-weight: bold;
+    font-family: Ubuntu;
 
     a {
         color: inherit;

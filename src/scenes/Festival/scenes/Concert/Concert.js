@@ -67,6 +67,7 @@ const Infos = styled.div`
     .infoBtn {
         color: white;
         background-color: black;
+        font-family: Ubuntu;
         border: none;
         font-size: 1em;
         text-transform: uppercase;
@@ -79,6 +80,11 @@ const Infos = styled.div`
         width: 80%;
         margin: 1.5em auto;
         text-transform: uppercase;
+        font-family: 'Open Sans';
+
+        h4 {
+            font-family: Ubuntu;
+        }
 
         ${media.desktop`
             width: 50%;
@@ -92,7 +98,7 @@ const Map = styled.img`
     `}
 
     ${media.desktop`
-        width: 70%;
+        width: 60%;
     `}
 `;
 

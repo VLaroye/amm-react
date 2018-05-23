@@ -7,6 +7,7 @@ const SectionTitle = styled.h3`
     padding: 2.5em 0;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: Ubuntu;
 `;
 
 export default SectionTitle;

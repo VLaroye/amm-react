@@ -35,6 +35,7 @@ const RightContainer = styled.div `
     ${media.tablet`
         display: block;
         width: 50%;
+        text-align: right;
     `}
 `;
 
@@ -72,6 +73,7 @@ const Infos = styled.div`
     .infoBtn {
         color: white;
         background-color: black;
+        font-family: Ubuntu;
         border: none;
         font-size: 1em;
         text-transform: uppercase;
@@ -84,6 +86,11 @@ const Infos = styled.div`
         width: 80%;
         margin: 1.5em auto;
         text-transform: uppercase;
+        font-family: 'Open Sans';
+
+        h4 {
+            font-family: Ubuntu;
+        }
 
         ${media.desktop`
             width: 70%;
@@ -93,6 +100,14 @@ const Infos = styled.div`
 
 const Map = styled.img`
     width: 100%;
+
+     ${media.tablet`
+        width: 100%;  
+    `}
+
+    ${media.desktop`
+        width: 60%;
+    `}
 `;
 
 const mapping = () => (

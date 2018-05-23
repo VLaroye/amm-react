@@ -34,10 +34,13 @@ const PresentationSection = styled.section`
     .presentation {
 
         h3 {
+            font-family: Ubuntu;
             width: 90%;
             margin: 0;
             font-size: 2em;
         }
+
+        font-family: 'Open Sans';
         max-width: 80%;
         margin: auto;
         padding: 0.5em 0;
@@ -88,6 +91,7 @@ const EventDiv = styled.div`
         left: 5%;
 
         h4 {
+            font-family: Ubuntu;
             display: inline-block;
             margin: 0;
         }

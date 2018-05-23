@@ -15,6 +15,7 @@ import Mapping from './scenes/Festival/scenes/Mapping/Mapping';
 import Association from './scenes/Association/Association';
 import Gallery from './scenes/Gallery/Gallery';
 import Contact from './scenes/Contact/Contact';
+import Artist from './scenes/Artist/Artist';
 
 class App extends Component {
 
@@ -40,6 +41,7 @@ class App extends Component {
             <Route path='/asso' component={Association} />
             <Route path='/galerie' component={Gallery} />
             <Route path='/contact' component={Contact} />
+            <Route path='/artiste/:artistName' component={Artist} />
           </Switch>
         </Layout>
       </Router>
