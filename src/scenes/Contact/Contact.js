@@ -22,7 +22,7 @@ const Header = styled.section`
     `};
 
     ${media.desktop`
-        height: 20em;
+        height: 13em;
     `};
 `;
 
@@ -37,16 +37,48 @@ const HeaderButton = styled.button`
     padding: 0 0.7em;
 `;
 
-const ContactForm = styled.form``;
+const ContactInfos = styled.section`
+    width: 80%;
+    margin: 3em auto 0 auto;
+    border: 1px solid lightgray;
+    text-align: center;
+    margin-bottom: 3em;
+    font-family: 'Open Sans';
+
+    h4 {
+        font-family: Ubuntu;
+        background-color: #af3f71;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    h4:nth-of-type(2) {
+        background-color: #e67b73;
+        color: white;
+    }
+
+    div {
+        margin: 1em 0;
+    }
+
+    a {
+        color: inherit;
+        margin: 1em 0;
+    }
+`;
 
 const contact = () => (
     <Container>
         <Header>
-            <HeaderButton>rejoins-nous</HeaderButton>
-            <HeaderButton>contacte-nous</HeaderButton>
         </Header>
-        <ContactForm>
-        </ContactForm>
+        <ContactInfos>
+            <h4>Mail</h4>
+            <p>art.mass.mess.contact@gmail.com</p>
+            <h4>Facebook</h4>
+            <div>
+                <a href="https://www.facebook.com/AMM.artmassandmess">Page Facebook AMM</a>
+            </div>
+        </ContactInfos>
     </Container>
 );
 
