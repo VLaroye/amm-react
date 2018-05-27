@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import media from '../../mediaQueriesTemplate';
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/fontawesome-free-brands';
@@ -12,23 +13,36 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 const Container = styled.div`
   display: flex;
+  justify-content: space-around;
 `;
 
 const ArtistImg = styled.img`
   width: 50%;
+  float: left;
   max-height: 15em;
+
+  ${media.desktop`
+    width: 40%;
+    max-height: 100%;
+  `}
 `;
 
 const ArtistDetails = styled.div`
   width: 50%
   display: flex;
+  align-content: start;
   flex-wrap: wrap;
+  
+  p {
+    margin: 0;
+    padding: 0.5em;
+  }
 
   #origine {
     width: 50%;
     h4 {
       margin: 0;
-      padding: 0.2em 0 0.2em 0.5em;
+      padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
@@ -41,7 +55,7 @@ const ArtistDetails = styled.div`
     width: 50%;
     h4 {
       margin: 0;
-      padding: 0.2em 0 0.2em 0.5em;
+      padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
@@ -55,7 +69,7 @@ const ArtistDetails = styled.div`
 
     h4 {
       margin: 0;
-      padding: 0.2em 0 0.2em 0.5em;
+      padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
@@ -66,9 +80,10 @@ const ArtistDetails = styled.div`
 
   #description {
     width: 100%;
+    text-align: center;
     h4 {
       margin: 0;
-      padding: 0.2em 0 0.2em 0.5em;
+      padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
