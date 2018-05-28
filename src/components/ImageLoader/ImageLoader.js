@@ -16,7 +16,7 @@ const Container = styled.div`
 class ImageLoader extends Component {
 
     state= {
-        status: 'loading'
+        status: 'loaded'
     }
 
     handleImageLoaded = () => {

@@ -11,6 +11,9 @@ import firebase from 'firebase';
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
+// IMAGES
+import ferqli from '../../assets/LineUp/ferqli.jpg';
+
 const Container = styled.div`
   margin-bottom: 2em;
   display: flex;
@@ -120,9 +123,45 @@ const ArtistDetails = styled.div`
 
 `;
 
+const YoutubeVideo = styled.div`
+  width: 100%
+
+  iframe {
+    margin: 2em 0 0 0;
+    width: 100%;
+    height: 17em;
+  }
+
+  ${media.tablet`
+    iframe {
+      height: 25em;
+    }
+  `}
+
+  ${media.desktop`
+    iframe {
+      height: 40em;
+    }
+  `}
+`;
+
 class Artist extends Component {
   state = {
-    artist: [],
+    artists: [
+      {
+          name : 'Ferqli',
+          imgSrc: ferqli,
+          description: 'bla bla bla',
+          links: {
+              facebook: "http://facebook.com",
+              youtube: "http://youtube.com",
+          },
+          origin: 'France',
+          style: 'House',
+          youtubeVideo: "https://www.youtube.com/embed/ksHwr2eNJUc",
+      }
+    ],
+    artist: {},
     loading: true,
     fbLink: "",
     instaLink: "",
@@ -132,27 +171,19 @@ class Artist extends Component {
   }
 
   componentDidMount() {
-    var database = firebase.database();
-    let artists = { ...this.state.artists };
-    var artistsRef = database.ref('/artists');
-
-    artistsRef.once('value')
-      .then(data => {
-        artists = data.val();
-        for(var i = 0; i < artists.length; i++) {
-          if (artists[i] != undefined && artists[i].name && artists[i].name === this.props.match.params.artistName) {
-            console.log(artists[i]);
-            this.setState({
-              artist : artists[i],
-              fbLink: artists[i].links.facebook,
-              instaLink: artists[i].links.instagram,
-              youtubeLink: artists[i].links.youtube,
-              bandCampLink: artists[i].links.bandcamp,
-            });
-            break;
-          }
-        }
-      });
+    for (var i = 0; i < this.state.artists.length; i++) {
+      if (this.state.artists[i] != undefined && this.state.artists[i].name && this.state.artists[i].name === this.props.match.params.artistName) {
+        this.setState({
+            artist : this.state.artists[i],
+            fbLink: this.state.artists[i].links.facebook,
+            instaLink: this.state.artists[i].links.instagram,
+            youtubeLink: this.state.artists[i].links.youtube,
+            bandCampLink: this.state.artists[i].links.bandcamp,
+          });
+        console.log(this.state);
+        break;
+      }
+    }
   };
 
   render() {
@@ -196,7 +227,9 @@ class Artist extends Component {
               <p>{ this.state.artist.description || "N.C" }</p>
             </div>
           </ArtistDetails>
-
+          <YoutubeVideo>
+            <iframe src={this.state.artist.youtubeVideo} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </YoutubeVideo>
         </Container>
         
       </div>

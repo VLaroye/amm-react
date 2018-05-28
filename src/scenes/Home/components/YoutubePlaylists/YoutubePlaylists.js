@@ -13,6 +13,8 @@ const API_KEY = 'AIzaSyDTSOmwWBiFQU8DJYFlmb6sTCYktkiIv_g';
 const MAX_RESULT = 10;
 
 const Header = styled.div`
+    display: flex;
+    justify-content: space-between;
     h3 {
         color: #b14772;
         margin: 0;
@@ -26,7 +28,7 @@ const Header = styled.div`
 
 const ControlButton = styled.button`
     cursor: pointer;
-    color: white;
+    margin: 0 1em;
     background-color: inherit;
     border: none;
 `;
@@ -134,11 +136,11 @@ class YoutubePlaylists extends Component {
             <div>
                 <Header>
                     <ControlButton onClick={this.handlePrevious}>
-                        <FontAwesomeIcon icon={faChevronLeft}/>
+                        <FontAwesomeIcon icon={faChevronLeft} size="2x"/>
                     </ControlButton>
                     <h3>Playlists de la semaine</h3>
                     <ControlButton onClick={this.handleNext}>
-                        <FontAwesomeIcon icon={faChevronRight} />
+                        <FontAwesomeIcon icon={faChevronRight} size="2x" />
                     </ControlButton>
                 </Header>
                 { this.state.loading === true ? 

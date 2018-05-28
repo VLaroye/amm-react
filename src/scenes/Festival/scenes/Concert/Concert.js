@@ -98,7 +98,7 @@ const Map = styled.img`
     `}
 
     ${media.desktop`
-        width: 60%;
+        width: 100%;
     `}
 `;
 

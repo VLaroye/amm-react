@@ -8,6 +8,9 @@ import firebase from 'firebase';
 import Spinner from '../../../../../../components/Spinner/Spinner';
 import LineUpElement from './LineUpElement/LineUpElement';
 
+// IMAGES
+import ferqli from '../../../../../../assets/LineUp/ferqli.jpg'
+
 const Container = styled.section`
     max-width: 100%;
     display: flex;
@@ -18,24 +21,19 @@ const Container = styled.section`
 class LineUp extends Component {
 
     state = {
-        artists: [],
-        loading: true
-    }
-
-    componentDidMount() {
-        var database = firebase.database();
-        let artists = {...this.state.artists};        
-        var artistsRef = database.ref('/artists');
-
-        artistsRef.once('value')
-            .then(data => {
-                console.log(data);
-                artists = data.val();
-                this.setState({
-                    artists,
-                    loading: false
-                })
-        });
+        artists: [
+            {
+                name : 'Ferqli',
+                imgSrc: ferqli,
+                description: 'bla bla bla',
+                links: {
+                    fbLink: "http://facebook.com",
+                },
+                origin: 'France',
+                style: 'House',
+            }
+        ],
+        loading: false
     }
 
     render() {

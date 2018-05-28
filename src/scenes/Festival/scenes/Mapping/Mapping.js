@@ -11,7 +11,11 @@ import VideoPlayer from '../../../../components/VideoPlayer/VideoPlayer';
 import mappingHeader from '../../../../assets/Festival/mapping-header.jpg';
 import map from '../../../../assets/Festival/map.jpg';
 
-const Container = styled.div``;
+const Container = styled.div`
+    h3:nth-of-type(3) {
+        background-color: #af3f71;
+    }
+`;
 
 const MainImage = styled.img`
     display: block;
@@ -106,7 +110,7 @@ const Map = styled.img`
     `}
 
     ${media.desktop`
-        width: 60%;
+        width: 100%;
     `}
 `;
 

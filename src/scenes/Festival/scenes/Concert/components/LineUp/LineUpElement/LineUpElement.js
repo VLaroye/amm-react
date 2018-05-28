@@ -17,7 +17,7 @@ const Container = styled.div`
     `}
 `;
 
-const ArtistImg = styled(ImageLoader)`
+const ArtistImg = styled.img`
     width: 100%;
     height: 100%;
 `;

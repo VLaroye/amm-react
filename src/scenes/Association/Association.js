@@ -7,6 +7,9 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 // IMAGES
 import logo from '../../assets/Logo/logo_pres.png';
+import molkky from '../../assets/Asso/Molkky.JPG';
+import cineSoupe from '../../assets/Asso/cinesoupe.png';
+import expoConcert from '../../assets/Asso/expoConcert.png';
 
 const PresentationSection = styled.section`    
     display: flex;
@@ -73,28 +76,36 @@ const PresentationSection = styled.section`
 `;
 
 const EventsSection = styled.section`
+        margin-bottom: 2em;
 `;
 
 const EventsContainer = styled.div`
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 `;
 
 const EventDiv = styled.div`
     width: 50%;
-    height: 15em;
     position: relative;
 
     .title {
         position: absolute;
         bottom: 10%;
         left: 5%;
+        background-color: white;
 
         h4 {
+            padding: 0.5em;
             font-family: Ubuntu;
             display: inline-block;
             margin: 0;
         }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
     }
 
     ${media.tablet`
@@ -121,25 +132,28 @@ const association = () => (
             </div>
             <div className="presentation">
                 <h3>Art, Mass & Mess</h3>
-                <p>Forte de ses trois années d'éxpérience, 
-                    l'association AMM propose une nouvelle approche de la culture
-                    en proposant des évènements hybrides et originaux.</p>
+                <p> Forte de ses trois années d’expériences, l’association AMM propose une nouvelle approche de la culture en proposant des événements hybrides et originaux.</p>
+
+                <p>Concerts, expositions, spectacles, activités sportives, AMM touche tous les publics par le biais de manifestations variées organisés dans notre belle Flandre. </p>
             </div>
         </PresentationSection>
         <EventsSection>
             <SectionTitle>Nos events</SectionTitle>
             <EventsContainer>
                 <EventDiv>
-                    <div className="title">
+                    <img src={molkky}/>
+                    <div className="title">    
                         <h4>Tournoi de Mölkky</h4>
                     </div>
                 </EventDiv>
                 <EventDiv>
+                    <img src={expoConcert}/>
                     <div className="title">
                         <h4>Expo Concert</h4>
                     </div>
                 </EventDiv>
                 <EventDiv>
+                    <img src={cineSoupe}/>
                     <div className="title">
                         <h4>Ciné Soupe</h4>
                     </div>
