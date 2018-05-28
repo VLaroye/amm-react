@@ -29,6 +29,7 @@ class LineUp extends Component {
 
         artistsRef.once('value')
             .then(data => {
+                console.log(data);
                 artists = data.val();
                 this.setState({
                     artists,

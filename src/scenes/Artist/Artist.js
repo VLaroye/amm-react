@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import media from '../../mediaQueriesTemplate';
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram } from '@fortawesome/fontawesome-free-brands';
+import { faFacebook, faInstagram, faYoutube, faBandcamp } from '@fortawesome/fontawesome-free-brands';
 
 // FIREBASE 
 import firebase from 'firebase';
@@ -12,14 +12,17 @@ import firebase from 'firebase';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 const Container = styled.div`
+  margin-bottom: 2em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: start;  
+  
 `;
 
 const ArtistImg = styled.img`
-  width: 50%;
+  width: 100%;
   float: left;
-  max-height: 15em;
 
   ${media.desktop`
     width: 40%;
@@ -28,7 +31,7 @@ const ArtistImg = styled.img`
 `;
 
 const ArtistDetails = styled.div`
-  width: 50%
+  width: 100%
   display: flex;
   align-content: start;
   flex-wrap: wrap;
@@ -42,6 +45,7 @@ const ArtistDetails = styled.div`
     width: 50%;
     h4 {
       margin: 0;
+      box-sizing: border-box;
       padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
@@ -55,6 +59,7 @@ const ArtistDetails = styled.div`
     width: 50%;
     h4 {
       margin: 0;
+      box-sizing: border-box;
       padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
       font-weight: bold;
@@ -73,15 +78,31 @@ const ArtistDetails = styled.div`
       font-family: Ubuntu;
       font-weight: bold;
       text-transform: uppercase;
-      width: 100%;
+      max-width: 100%;
       background-color: #b14772;
+    }
+
+    #linksContainer {
+      display: flex;
+      justify-content: space-around;
+      padding: 1em 0;
+
+      a {
+        color: inherit;
+      }
     }
   }
 
   #description {
     width: 100%;
-    text-align: center;
+    
+    p {
+      width: 95%;
+      margin: 1em auto;
+    }
+
     h4 {
+      max-width: 100%;
       margin: 0;
       padding: 0.5em 0 0.5em 0.5em;
       font-family: Ubuntu;
@@ -91,12 +112,22 @@ const ArtistDetails = styled.div`
       background-color: black;
     }
   }
+
+  ${media.desktop`
+    width: 40%;
+    max-height: 100%;
+  `}
+
 `;
 
 class Artist extends Component {
   state = {
     artist: [],
     loading: true,
+    fbLink: "",
+    instaLink: "",
+    youtubeLink: "",
+    bandCampLink: "",
     error: 'Impossible de trouver cet artiste',
   }
 
@@ -111,7 +142,13 @@ class Artist extends Component {
         for(var i = 0; i < artists.length; i++) {
           if (artists[i] != undefined && artists[i].name && artists[i].name === this.props.match.params.artistName) {
             console.log(artists[i]);
-            this.setState({artist : artists[i]});
+            this.setState({
+              artist : artists[i],
+              fbLink: artists[i].links.facebook,
+              instaLink: artists[i].links.instagram,
+              youtubeLink: artists[i].links.youtube,
+              bandCampLink: artists[i].links.bandcamp,
+            });
             break;
           }
         }
@@ -136,7 +173,22 @@ class Artist extends Component {
             <div id="links">
               <h4>Liens</h4>
               <div id="linksContainer">
-                <div>{ this.state.artist.name }</div>
+                {this.state.fbLink ?
+                  <div id="facebook"><a href={this.state.fbLink || ""}><FontAwesomeIcon icon={faFacebook} size='3x' /></a></div> :
+                  null
+                }
+                {this.state.bandcampLink ?
+                  <div id="bandcamp"><a href={this.state.bandcampLink || ""}><FontAwesomeIcon icon={faBandcamp} size='3x' /></a></div> :
+                  null
+                }
+                {this.state.instaLink ?
+                  <div id="instagram"><a href={this.state.instaLink || ""}><FontAwesomeIcon icon={faInstagram} size='3x'/></a></div> :
+                  null
+                }
+                {this.state.youtubeLink ?
+                  <div id="youtube"><a href={this.state.youtubeLink || ""}><FontAwesomeIcon icon={faYoutube} size='3x'/></a></div> :
+                  null
+                }
               </div>
             </div>
             <div id="description">
@@ -144,7 +196,9 @@ class Artist extends Component {
               <p>{ this.state.artist.description || "N.C" }</p>
             </div>
           </ArtistDetails>
+
         </Container>
+        
       </div>
     );
   }
