@@ -9,7 +9,6 @@ import firebase from 'firebase';
 // COMPONENTS
 import Layout from './components/Layout/Layout';
 import HomePage from './scenes/Home/HomePage';
-import Festival from './scenes/Festival/Festival';
 import Concert from './scenes/Festival/scenes/Concert/Concert';
 import Mapping from './scenes/Festival/scenes/Mapping/Mapping';
 import Association from './scenes/Association/Association';
@@ -35,12 +34,11 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route exact path='/festival' component={Festival} />
-            <Route path='/festival/concert' component={Concert} />
-            <Route path='/festival/mapping' component={Mapping} />
-            <Route path='/asso' component={Association} />
+            <Route exact path='/festival/concert' component={Concert} />
+            <Route exact path='/festival/mapping' component={Mapping} />
+            <Route exact path='/asso' component={Association} />
             <Route path='/galerie' component={Gallery} />
-            <Route path='/contact' component={Contact} />
+            <Route exact path='/contact' component={Contact} />
             <Route path='/artiste/:artistName' component={Artist} />
           </Switch>
         </Layout>

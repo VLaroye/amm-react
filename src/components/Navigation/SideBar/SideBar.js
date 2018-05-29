@@ -7,6 +7,13 @@ import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
 // ROUTING
 import { Link } from 'react-router-dom';
 
+const SideBarItemContainer = styled.div`
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+`;
+
 const Container = styled.div`
     min-height: 100vh;
     width: 70%;
@@ -76,14 +83,14 @@ const sideBar = (props) => {
     const navItems = props.navItems
         .map(item => {
             return (
-                <SideBarItem 
-                    key={item.page} 
-                    path={item.path}
-                    toggleSideBar={props.toggleSideBar}
-                >
-                    <Link to={item.path} >{item.page}</Link>
-                    <FontAwesomeIcon icon={faChevronRight} size="2x" />
-                </SideBarItem>
+                <SideBarItemContainer key={item.page}>
+                    <Link to={item.path}>
+                        <SideBarItem >
+                            {item.page}
+                            <FontAwesomeIcon icon={faChevronRight} size="2x" />
+                        </SideBarItem>
+                    </Link>
+                </SideBarItemContainer>
             )
         });
 

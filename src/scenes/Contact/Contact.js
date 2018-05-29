@@ -26,17 +26,6 @@ const Header = styled.section`
     `};
 `;
 
-const HeaderButton = styled.button`
-    font-family: Ubuntu;
-    border: none;
-    margin: 0 1em;
-    background-color: #af3f71;
-    min-height: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 0 0.7em;
-`;
-
 const ContactInfos = styled.section`
     width: 80%;
     margin: 3em auto 0 auto;

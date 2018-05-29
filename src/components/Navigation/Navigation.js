@@ -14,7 +14,7 @@ class Navigation extends Component {
             },
             {
               page: 'le fest',
-              path:'/festival'
+              path:'/festival/concert'
             },
             {
               page: 'l\'asso',

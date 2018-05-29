@@ -5,14 +5,12 @@ import media from '../../mediaQueriesTemplate';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faYoutube, faBandcamp } from '@fortawesome/fontawesome-free-brands';
 
-// FIREBASE 
-import firebase from 'firebase';
-
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 // IMAGES
 import ferqli from '../../assets/LineUp/ferqli.jpg';
+import tooMany from '../../assets/LineUp/tooMany.jpeg';
 
 const Container = styled.div`
   margin-bottom: 2em;
@@ -149,16 +147,24 @@ class Artist extends Component {
   state = {
     artists: [
       {
-          name : 'Ferqli',
-          imgSrc: ferqli,
-          description: 'bla bla bla',
-          links: {
-              facebook: "http://facebook.com",
-              youtube: "http://youtube.com",
-          },
-          origin: 'France',
-          style: 'House',
-          youtubeVideo: "https://www.youtube.com/embed/ksHwr2eNJUc",
+        name: 'Too Many T\'s',
+        imgSrc: tooMany,
+        description: 'bla bla bla',
+        links: {
+          fbLink: "http://facebook.com",
+        },
+        origin: 'France',
+        style: 'House',
+      },
+      {
+        name: 'Ferqli',
+        imgSrc: ferqli,
+        description: 'bla bla bla',
+        links: {
+          fbLink: "http://facebook.com",
+        },
+        origin: 'France',
+        style: 'House',
       }
     ],
     artist: {},
@@ -172,7 +178,7 @@ class Artist extends Component {
 
   componentDidMount() {
     for (var i = 0; i < this.state.artists.length; i++) {
-      if (this.state.artists[i] != undefined && this.state.artists[i].name && this.state.artists[i].name === this.props.match.params.artistName) {
+      if (this.state.artists[i] !== undefined && this.state.artists[i].name && this.state.artists[i].name === this.props.match.params.artistName) {
         this.setState({
             artist : this.state.artists[i],
             fbLink: this.state.artists[i].links.facebook,
@@ -228,7 +234,7 @@ class Artist extends Component {
             </div>
           </ArtistDetails>
           <YoutubeVideo>
-            <iframe src={this.state.artist.youtubeVideo} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src={this.state.artist.youtubeVideo} title="artistVideo" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </YoutubeVideo>
         </Container>
         

@@ -4,9 +4,6 @@ import media from '../../../../../../../mediaQueriesTemplate';
 
 import { Link } from 'react-router-dom';
 
-// COMPONENTS
-import ImageLoader from '../../../../../../../components/ImageLoader/ImageLoader';
-
 const Container = styled.div`
     position: relative;
     width: 50%;
@@ -15,6 +12,10 @@ const Container = styled.div`
     ${media.desktop`
         width: 33.33333%;
     `}
+
+    a {
+        color: inherit;
+    }
 `;
 
 const ArtistImg = styled.img`

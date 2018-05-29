@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../../mediaQueriesTemplate';
 
+import { Link } from 'react-router-dom';
+
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/fontawesome-free-solid';
 import { faFacebook, faInstagram } from  '@fortawesome/fontawesome-free-brands';
@@ -18,7 +20,7 @@ const Container = styled.footer`
 `;
 
 const Socials = styled.div`
-    width: 15%;
+    width: 25%;
     display: flex;
     justify-content: space-around;
 
@@ -32,6 +34,11 @@ const Logo = styled.img`
     height: 3em;
     width: 10%;
     display: none;
+
+    ${media.desktop`
+        width: 7%;
+        display: block;
+    `};
 `;
 
 const Links = styled.div`
@@ -52,20 +59,19 @@ const Links = styled.div`
 const footer = () => (
     <Container>
         <Socials>
-            <a href="">
+            <a href="https://www.facebook.com/AMM.artmassandmess">
                 <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="">
+            <a href="http://instagram.com/amm_fest">
                 <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/events/2023571984585136/">
                 <FontAwesomeIcon icon={faUserPlus} />
             </a>
         </Socials>
         <Links>
-            <a href="">Home</a>
-            <a href="">Contact</a>
-            <a href="">Terms of use</a>
+            <Link to="/">Home</Link>
+            <Link to="/contact">Contact</Link>
         </Links>
         <Logo src={logo} />
     </Container>    

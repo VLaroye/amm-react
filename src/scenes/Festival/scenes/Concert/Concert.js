@@ -9,7 +9,6 @@ import LineUp from './components/LineUp/LineUp';
 
 // IMAGES 
 import map from '../../../../assets/Festival/map.jpg';
-import pictos from '../../../../assets/Festival/picto.png';
 
 const Container = styled.div`
     #infoSectionTitle {
@@ -102,10 +101,6 @@ const Map = styled.img`
     `}
 `;
 
-const Pictos = styled.img`
-    max-width: 100%;
-`;
-
 const concert = () => (
     <Container>
         <Header />
@@ -126,7 +121,9 @@ const concert = () => (
                     <div className="infoGroup">
                         <p>Accès : A25, Sortie 13 STEENVOORDE</p>
                     </div>
-                    <button className="infoBtn">Google Map</button>
+                    <a href="https://goo.gl/maps/eyskbEugPxv">
+                        <button className="infoBtn">Google Map</button>
+                    </a>
                 </div>
                 <div id="entries">
                     <h4>entrée</h4>

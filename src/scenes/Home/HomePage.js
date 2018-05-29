@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import media from '../../mediaQueriesTemplate';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/fontawesome-free-brands';
+
+
 // IMAGES
 import headerImg from '../../assets/HomePage/homePage-header.jpg';
 import facebookLogo from '../../assets/Socials/facebook.png';
@@ -11,6 +15,7 @@ import userLogo from '../../assets/Socials/user.png';
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import YoutubePlaylists from './components/YoutubePlaylists/YoutubePlaylists';
+import { Link } from 'react-router-dom';
 
 const Header = styled.section`
     position: relative;
@@ -136,6 +141,10 @@ const NextEventLeftSection = styled.div`
     display: flex;
     flex-flow: column;
 
+    #socials {
+        margin-top: 0.5em;
+    }
+
     ${media.tablet`
         order: 1;
         width: 30%;
@@ -192,22 +201,30 @@ class HomePage extends Component {
             <div>
                 <Header>
                     <img src={headerImg} alt="Jumo sur la scène du AMM Fest numéro 3"/>
-                    <HeaderButton>
-                        <h4>20 - 21 Juillet 2018</h4>
-                        <h5>Steenvoorde</h5>
-                        <h6>Mapping / 2 scènes <br/> Coin ciné</h6>
-                    </HeaderButton>
+                    <Link to="/festival/concert">
+                        <HeaderButton>
+                            <h4>20 - 21 Juillet 2018</h4>
+                            <h5>Steenvoorde</h5>
+                            <h6>Mapping / 2 scènes <br/> Coin ciné</h6>
+                        </HeaderButton>
+                    </Link>
                 </Header>
                 
                 <Socials>
                     <SocialIcon>
-                        <img src={facebookLogo} alt="Logo Facebook"/>
+                        <a href="https://www.facebook.com/AMM.artmassandmess">
+                            <img src={facebookLogo} alt="Logo Facebook"/>
+                        </a>
                     </SocialIcon>
                     <SocialIcon>
-                        <img src={instagramLogo} alt="Logo Instagram"/>
+                        <a href="http://instagram.com/amm_fest">
+                            <img src={instagramLogo} alt="Logo Instagram"/>
+                        </a>
                     </SocialIcon>
                     <SocialIcon>
-                        <img src={userLogo} alt="Logo indiquant la page pour rejoiindre l'association"/>
+                        <a href="https://www.facebook.com/events/2023571984585136/">
+                            <img src={userLogo} alt="Logo indiquant la page pour rejoiindre l'association"/>
+                        </a>
                     </SocialIcon>
                 </Socials>
 
@@ -216,11 +233,17 @@ class HomePage extends Component {
                         <SectionTitle>événements à venir</SectionTitle>
                         <NextEventSectionContainer>
                             <NextEventLeftSection>
-                                <EventDate>28 Août</EventDate>
+                                <EventDate>15 Juin - DIY (Lille)</EventDate>
                                 <EventDivider/>
-                                <EventName>Tournoi de Mölkky</EventName>
+                                <EventName>AMM Bier + Concert</EventName>
+                                <div id="socials">
+                                    <a href="https://www.facebook.com/events/423793358048423/">
+                                        <FontAwesomeIcon icon={faFacebook} size="3x" color="white"/>
+                                    </a>
+                                </div>
                             </NextEventLeftSection>
                             <NextEventRightSection></NextEventRightSection>
+                            
                         </NextEventSectionContainer>
                     </NextEventSection>
 

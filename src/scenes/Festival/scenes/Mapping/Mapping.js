@@ -137,7 +137,9 @@ const mapping = () => (
                     <div className="infoGroup">
                         <p>Accès : A25, Sortie 13 STEENVOORDE</p>
                     </div>
-                    <button className="infoBtn">Google Map</button>
+                    <a href="https://goo.gl/maps/1CioHjDScXq">
+                        <button className="infoBtn">Google Map</button>
+                    </a>
                 </div>
                 <div id="entries">
                     <h4>horaires</h4>
