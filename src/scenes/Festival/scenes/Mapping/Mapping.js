@@ -31,6 +31,7 @@ const InfosContainer = styled.section`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
 `;
 
 const RightContainer = styled.div `

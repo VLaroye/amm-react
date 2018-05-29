@@ -10,6 +10,7 @@ import logo from '../../assets/Logo/logo_pres.png';
 import molkky from '../../assets/Asso/Molkky.JPG';
 import cineSoupe from '../../assets/Asso/cinesoupe.png';
 import expoConcert from '../../assets/Asso/expoConcert.png';
+import equipe from '../../assets/Asso/equipe.jpg';
 
 const PresentationSection = styled.section`    
     display: flex;
@@ -118,10 +119,21 @@ const EventDiv = styled.div`
 `;
 
 const TeamSection = styled.section`
+    text-align: center;
     h3 {
         background-color: black;
         color: white;
     }
+
+    img {
+        width: 100%;
+    }
+
+    ${media.desktop`
+        img {
+            width: 70%;
+        }
+    `}
 `;
 
 const association = () => (
@@ -162,6 +174,7 @@ const association = () => (
         </EventsSection>
         <TeamSection>
             <SectionTitle>L'équipe</SectionTitle>
+            <img src={equipe}/>
         </TeamSection>
     </div>
 );

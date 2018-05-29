@@ -35,11 +35,33 @@ const Logo = styled.img`
 const NavMenu = styled.ul`
     display: none;
 
+    button {
+
+        @keyframes couleur { from { background-color: #da4989; } to { background-color: white; }}
+
+        position: fixed;
+        right: 3em;
+        border: none;
+        padding: 0.8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #da4989;
+        color: white;
+
+        animation: 0.8s linear 0s infinite alternate couleur;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
     ${media.tablet`
         width: 100%;
         list-style: none;
         display: flex;
         justify-content: center;
+        align-items: center;
     `}
 `;
 
@@ -91,6 +113,11 @@ const topBar = (props) => {
             <Logo src={ logo } />
             <NavMenu>
                 { navItems }
+                    <button>
+                        <a href="https://www.weezevent.com/widget_billeterie.php?id_evenement=350150&lg_billetterie=1&code=69650&width_auto=1&color_primary=00AEEF">
+                            Réserve ta place !
+                        </a>
+                    </button>
             </NavMenu>
             <ToggleSideBarButton onClick={props.toggleSideBar} >
                 <FontAwesomeIcon icon={faBars} size='2x' />

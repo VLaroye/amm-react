@@ -20,6 +20,7 @@ const InfosContainer = styled.section`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
 `;
 
 const RightContainer = styled.div `
@@ -73,6 +74,11 @@ const Infos = styled.div`
         font-weight: bold;
         margin-top: 1.3em;
         padding: 1em;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
     }
 
     #site, #entries, #onSite {
@@ -131,11 +137,15 @@ const concert = () => (
                     <p>garden party : 15h-19h30</p>
                     <p>concert : 19h30-3h00</p>
                     <div className="prices">
-                        <p>pass journée : 12euros*</p>
-                        <p>pass soirée : 9euros*</p>
+                        <p>Prévente web : 12€ (+1 euros de frais de réservation)</p>
+                        <p>Sur place : 15€</p>
                     </div>
                     <p>*gratuit pour les moins de 12ans</p>
-                    <button className="infoBtn">réserve ta place !</button>
+                    <button className="infoBtn">
+                        <a href="https://www.weezevent.com/widget_billeterie.php?id_evenement=350150&lg_billetterie=1&code=69650&width_auto=1&color_primary=00AEEF">
+                            Réserve ta place !
+                        </a>
+                    </button>
                 </div>
                 <div id="onSite">
                     <h4>sur place</h4>
