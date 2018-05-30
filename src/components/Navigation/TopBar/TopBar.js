@@ -16,7 +16,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    height: 5em;
+    height: 2.5em;
     width: 100%;
     background-color: white;
     z-index: 300;
@@ -24,6 +24,10 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ${media.tablet`
+        height: 5em;
+    `}    
 `;
 
 const Logo = styled.img`
@@ -35,27 +39,6 @@ const Logo = styled.img`
 const NavMenu = styled.ul`
     display: none;
 
-    button {
-
-        @keyframes couleur { from { background-color: #da4989; } to { background-color: white; }}
-
-        position: fixed;
-        right: 3em;
-        border: none;
-        padding: 0.8em;
-        text-transform: uppercase;
-        font-weight: bold;
-        background-color: #da4989;
-        color: white;
-
-        animation: 0.8s linear 0s infinite alternate couleur;
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-
     ${media.tablet`
         width: 100%;
         list-style: none;
@@ -63,6 +46,32 @@ const NavMenu = styled.ul`
         justify-content: center;
         align-items: center;
     `}
+`;
+
+const BookLink = styled.a`
+        @keyframes couleur { from { background-color: #da4989; } to { background-color: white; }}
+
+        font-size: 0.7em;
+        margin: auto;
+        border: none;
+        padding: 0.8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #da4989;
+        color: white;
+        text-decoration: none;
+
+        animation: 0.8s linear 0s infinite alternate couleur;
+
+        ${media.tablet`
+            font-size: 0.7em;
+            position: fixed;
+            right: 2em;
+        `}
+
+        ${media.desktop`
+            font-size: 0.9em;
+        `}
 `;
 
 const NavItem = styled.li`
@@ -112,13 +121,11 @@ const topBar = (props) => {
         <Container>
             <Logo src={ logo } />
             <NavMenu>
-                { navItems }
-                    <button>
-                        <a href="https://www.weezevent.com/widget_billeterie.php?id_evenement=350150&lg_billetterie=1&code=69650&width_auto=1&color_primary=00AEEF">
-                            Réserve ta place !
-                        </a>
-                    </button>
+                { navItems }       
             </NavMenu>
+            <BookLink href="https://www.weezevent.com/widget_billeterie.php?id_evenement=350150&lg_billetterie=1&code=69650&width_auto=1&color_primary=00AEEF">
+                Réserve ta place !
+            </BookLink>
             <ToggleSideBarButton onClick={props.toggleSideBar} >
                 <FontAwesomeIcon icon={faBars} size='2x' />
             </ToggleSideBarButton>

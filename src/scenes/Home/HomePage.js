@@ -11,6 +11,7 @@ import headerImg from '../../assets/HomePage/homePage-header.jpg';
 import facebookLogo from '../../assets/Socials/facebook.png';
 import instagramLogo from '../../assets/Socials/insta.png';
 import userLogo from '../../assets/Socials/user.png';
+import nextEvent from '../../assets/HomePage/next-event.jpg';
 
 // COMPONENTS
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -95,7 +96,7 @@ const Socials = styled.section`
     margin: 1em auto;  
 `;
 
-const SocialIcon = styled.a`
+const SocialIcon = styled.div`
 
     img {
         max-width: 80%;
@@ -175,9 +176,13 @@ const EventName = styled.h4`
 const NextEventRightSection = styled.div`
     order: 1;
     width: 80%;
-    margin: 1em 0 0 0;
-    height: 20em;
-    background-color: white;
+    margin: 1em 0 1em 0;
+
+    img {
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+    }
 
     ${media.tablet`
         order: 2;
@@ -242,7 +247,9 @@ class HomePage extends Component {
                                     </a>
                                 </div>
                             </NextEventLeftSection>
-                            <NextEventRightSection></NextEventRightSection>
+                            <NextEventRightSection>
+                                <img src={nextEvent} alt="Bandeau prochain evenement"/>
+                            </NextEventRightSection>
                             
                         </NextEventSectionContainer>
                     </NextEventSection>

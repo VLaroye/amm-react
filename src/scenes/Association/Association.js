@@ -44,6 +44,10 @@ const PresentationSection = styled.section`
             font-size: 2em;
         }
 
+        p {
+            text-align: justify;
+        }
+
         font-family: 'Open Sans';
         max-width: 80%;
         margin: auto;
