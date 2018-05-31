@@ -33,7 +33,7 @@ class App extends Component {
       <Router>
         <Layout>
           <Switch>
-            <Route exact path='/' component={HomePage} />
+            <Route exact onEnter={() => console.log('coucuo')} path='/' component={HomePage} />
             <Route exact path='/festival/concert' component={Concert} />
             <Route exact path='/festival/mapping' component={Mapping} />
             <Route exact path='/asso' component={Association} />

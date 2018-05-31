@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import media from '../../../../mediaQueriesTemplate';
 
@@ -115,54 +115,55 @@ const Map = styled.img`
     `}
 `;
 
-const mapping = () => (
-    <Container>
-        <Header />
-        <SectionTitle>Mapping</SectionTitle>
-        <MainImage src={mappingHeader} />
-        <SectionTitle>Teaser</SectionTitle>
-            <VideoPlayer 
-                src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FVideoMappingFestival%2Fvideos%2F185176878754739%2F' 
-                title='Teaser Video Mapping Festival' 
-            />
-        
-        <SectionTitle>Infos</SectionTitle>
-        <InfosContainer>
-            <Infos>
-                <div id='site'>
-                    <h4>le site</h4>
-                    <div className="infoGroup">
-                        <p>28, place saint-pierre</p>
-                        <p>59114, STEENVOORDE</p>
-                    </div>
-                    <div className="infoGroup">
-                        <p>Accès : A25, Sortie 13 STEENVOORDE</p>
-                    </div>
-                    <a href="https://goo.gl/maps/1CioHjDScXq">
-                        <button className="infoBtn">Google Map</button>
-                    </a>
-                </div>
-                <div id="entries">
-                    <h4>horaires</h4>
-                    <p>début de la projection : 22h00</p>
-                    <p>fin de la projection : 00h00</p>
-                    <div className="prices">
-                        <p>gratuit !</p>
-                    </div>
-                </div>
-                <div id="onSite">
-                    <h4>sur place</h4>
-                    <p>coin cinéma</p>
-                    <p>camping gratuit</p>
-                    <p>bar</p>
-                    <p>restauration</p>
-                </div>
-            </Infos>
-            <RightContainer>
-                <Map src={map} />
-            </RightContainer>
-        </InfosContainer>
-    </Container>
-)
+class Mapping extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
+    render() {
+        return (
+            <Container>
+                <Header />
+                <SectionTitle>Mapping</SectionTitle>
+                <MainImage src={mappingHeader} />
+                <SectionTitle>Teaser</SectionTitle>
+                    <VideoPlayer 
+                        src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FVideoMappingFestival%2Fvideos%2F185176878754739%2F' 
+                        title='Teaser Video Mapping Festival' 
+                    />
+                
+                <SectionTitle>Infos</SectionTitle>
+                <InfosContainer>
+                    <Infos>
+                        <div id='site'>
+                            <h4>le site</h4>
+                            <div className="infoGroup">
+                                <p>28, place saint-pierre</p>
+                                <p>59114, STEENVOORDE</p>
+                            </div>
+                            <div className="infoGroup">
+                                <p>Accès : A25, Sortie 13 STEENVOORDE</p>
+                            </div>
+                            <a href="https://goo.gl/maps/1CioHjDScXq">
+                                <button className="infoBtn">Google Map</button>
+                            </a>
+                        </div>
+                        <div id="entries">
+                            <h4>horaires</h4>
+                            <p>début de la projection : 22h00</p>
+                            <p>fin de la projection : 00h00</p>
+                            <div className="prices">
+                                <p>gratuit !</p>
+                            </div>
+                        </div>
+                    </Infos>
+                    <RightContainer>
+                        <Map src={map} />
+                    </RightContainer>
+                </InfosContainer>
+            </Container>
+        );
+    }
+};
 
-export default mapping;
+export default Mapping;

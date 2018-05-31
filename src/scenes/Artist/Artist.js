@@ -247,7 +247,7 @@ class Artist extends Component {
           },
           origin: 'France',
           style: 'Techno',
-          youtubeVideo: 'https://www.youtube.com/embed/BqhffqiFUUg',
+        youtubeVideo: 'https://www.youtube.com/embed/kma2XKVAc5Y',
       },
       {
           name: 'Bellaire',
@@ -365,6 +365,7 @@ class Artist extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     for (var i = 0; i < this.state.artists.length; i++) {
       if (this.state.artists[i] !== undefined && this.state.artists[i].name && this.state.artists[i].name === this.props.match.params.artistName) {
         this.setState({

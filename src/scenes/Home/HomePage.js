@@ -195,12 +195,15 @@ const YoutubePlaylistSection = styled.section`
 `;
 
 class HomePage extends Component {
-
     state = {
         youtubeVideoSrc: 'https://www.youtube.com/watch?v=vaVcFzGrwgw',
         youtubeVideoTitle: 'Video Youtube - Playlist de la semaine'
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
     render() {
         return(
             <div>

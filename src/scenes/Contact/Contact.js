@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import media from '../../mediaQueriesTemplate';
 
@@ -56,19 +56,27 @@ const ContactInfos = styled.section`
     }
 `;
 
-const contact = () => (
-    <Container>
-        <Header>
-        </Header>
-        <ContactInfos>
-            <h4>Mail</h4>
-            <p>art.mass.mess.contact@gmail.com</p>
-            <h4>Facebook</h4>
-            <div>
-                <a href="https://www.facebook.com/AMM.artmassandmess">Page Facebook AMM</a>
-            </div>
-        </ContactInfos>
-    </Container>
-);
+class Contact extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
+    render() {
+        return (
+            <Container>
+                <Header>
+                </Header>
+                <ContactInfos>
+                    <h4>Mail</h4>
+                    <p>art.mass.mess.contact@gmail.com</p>
+                    <h4>Facebook</h4>
+                    <div>
+                        <a href="https://www.facebook.com/AMM.artmassandmess">Page Facebook AMM</a>
+                    </div>
+                </ContactInfos>
+            </Container>
+        )
+    }
+};
 
-export default contact;
+export default Contact;

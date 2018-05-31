@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import media from '../../mediaQueriesTemplate';
 
@@ -140,47 +140,54 @@ const TeamSection = styled.section`
     `}
 `;
 
-const association = () => (
-    <div>
-        <PresentationSection>
-            <div className="logo">
-                <img src={logo}/>
-            </div>
-            <div className="presentation">
-                <h3>Art, Mass & Mess</h3>
-                <p> Forte de ses trois années d’expériences, l’association AMM propose une nouvelle approche de la culture en proposant des événements hybrides et originaux.</p>
+class Association extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    render() {
+        return (
+            <div>
+                <PresentationSection>
+                    <div className="logo">
+                        <img src={logo}/>
+                    </div>
+                    <div className="presentation">
+                        <h3>Art, Mass & Mess</h3>
+                        <p> Forte de ses trois années d’expériences, l’association AMM propose une nouvelle approche de la culture en proposant des événements hybrides et originaux.</p>
 
-                <p>Concerts, expositions, spectacles, activités sportives, AMM touche tous les publics par le biais de manifestations variées organisés dans notre belle Flandre. </p>
+                        <p>Concerts, expositions, spectacles, activités sportives, AMM touche tous les publics par le biais de manifestations variées organisés dans notre belle Flandre. </p>
+                    </div>
+                </PresentationSection>
+                <EventsSection>
+                    <SectionTitle>Nos events</SectionTitle>
+                    <EventsContainer>
+                        <EventDiv>
+                            <img src={molkky}/>
+                            <div className="title">    
+                                <h4>Tournoi de Mölkky</h4>
+                            </div>
+                        </EventDiv>
+                        <EventDiv>
+                            <img src={expoConcert}/>
+                            <div className="title">
+                                <h4>Expo Concert</h4>
+                            </div>
+                        </EventDiv>
+                        <EventDiv>
+                            <img src={cineSoupe}/>
+                            <div className="title">
+                                <h4>Ciné Soupe</h4>
+                            </div>
+                        </EventDiv>
+                    </EventsContainer>
+                </EventsSection>
+                <TeamSection>
+                    <SectionTitle>L'équipe</SectionTitle>
+                    <img src={equipe}/>
+                </TeamSection>
             </div>
-        </PresentationSection>
-        <EventsSection>
-            <SectionTitle>Nos events</SectionTitle>
-            <EventsContainer>
-                <EventDiv>
-                    <img src={molkky}/>
-                    <div className="title">    
-                        <h4>Tournoi de Mölkky</h4>
-                    </div>
-                </EventDiv>
-                <EventDiv>
-                    <img src={expoConcert}/>
-                    <div className="title">
-                        <h4>Expo Concert</h4>
-                    </div>
-                </EventDiv>
-                <EventDiv>
-                    <img src={cineSoupe}/>
-                    <div className="title">
-                        <h4>Ciné Soupe</h4>
-                    </div>
-                </EventDiv>
-            </EventsContainer>
-        </EventsSection>
-        <TeamSection>
-            <SectionTitle>L'équipe</SectionTitle>
-            <img src={equipe}/>
-        </TeamSection>
-    </div>
-);
+        )
+    }
+};
 
-export default association;
+export default Association;
